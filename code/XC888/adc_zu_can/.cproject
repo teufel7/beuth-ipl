@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="com.ifx.xc800.appDebug.102985042">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ifx.xc800.appDebug.102985042" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+<externalSettings/>
+<extensions>
+<extension id="com.ifx.xc800.errorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="hex" artifactName="adc_zu_can" buildArtefactType="com.ifx.xc800.appBuildArtefactType" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=com.ifx.xc800.appBuildArtefactType" cleanCommand="del /F" description="" errorParsers="com.ifx.xc800.errorParser" id="com.ifx.xc800.appDebug.102985042" name="Debug" parent="com.ifx.xc800.appDebug">
+<folderInfo id="com.ifx.xc800.appDebug.102985042." name="/" resourcePath="">
+<toolChain errorParsers="" id="com.ifx.xc800.appDebug.toolChain.1352363313" name="XC800 Application Tool Chain" superClass="com.ifx.xc800.appDebug.toolChain">
+<option id="com.ifx.xc800.globalCategory.targetPath.1983223556" name="Target Path" superClass="com.ifx.xc800.globalCategory.targetPath" value="/ProcessorsInfo/XC800/XC886 \ XC888/XC888CLM-8FF" valueType="string"/>
+<option id="com.ifx.xc800.globalCategory.targetName.1100129505" name="Target Name" superClass="com.ifx.xc800.globalCategory.targetName" value="XC888CLM-8FF" valueType="string"/>
+<option id="com.ifx.xc800.globalCategory.siliconBugInfoList.841157447" name="Silicon Bug Info List" superClass="com.ifx.xc800.globalCategory.siliconBugInfoList" value="&lt;SiliconBugInfoList&gt;&#13;&#10;    &lt;SiliconBugInfo checked=&quot;FALSE&quot; description=&quot;Hardware Cache Miss. A NOP instruction will be generated before and after movc a,@a+dptr instruction&quot; flag=&quot;--hwc-wa&quot; id=&quot;XC800.002&quot;/&gt;&#13;&#10;&lt;/SiliconBugInfoList&gt;&#13;&#10;" valueType="string"/>
+<targetPlatform id="com.ifx.xc800.appDebug.102985042..2040644355" name=""/>
+<builder buildPath="${workspace_loc:/adc_zu_can/Debug}" errorParsers="" id="com.ifx.XC800.toolchainBuilder.556358308" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="XC800 Builder" superClass="com.ifx.XC800.toolchainBuilder"/>
+<tool errorParsers="com.ifx.xc800.errorParser" id="com.ifx.xc800.appDebug.compiler.68546729" name="SDCC Compiler" superClass="com.ifx.xc800.appDebug.compiler">
+<inputType id="com.ifx.xc800.compiler.inputType.1339723144" name="XC800 Compiler Input Type" superClass="com.ifx.xc800.compiler.inputType"/>
+</tool>
+<tool errorParsers="" id="com.ifx.xc800.appDebug.assembler.1416908763" name="SDCC Assembler" superClass="com.ifx.xc800.appDebug.assembler"/>
+<tool errorParsers="" id="com.ifx.xc800.appDebug.linker.1113203572" name="SDCC Linker" superClass="com.ifx.xc800.appDebug.linker">
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.xramEnd.1364912681" name="XRAM end address in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.xramEnd" value="0xF5FF" valueType="string"/>
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.xramStart.1608254334" name="XRAM start address in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.xramStart" value="0xF000" valueType="string"/>
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.rom1Start.1650507454" name="Flash/ROM1 start address in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.rom1Start" value="0x000" valueType="string"/>
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.rom1End.400092004" name="Flash/ROM1 end address in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.rom1End" value="0x7FFF" valueType="string"/>
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.psegStart.2108174512" name="PSEG (XRAM) start location in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.psegStart" value="0xF000" valueType="string"/>
+<inputType id="com.ifx.xc800.appLinker.inputType.830900395" name="XC800 Application Linker Input Type" superClass="com.ifx.xc800.appLinker.inputType"/>
+</tool>
+</toolChain>
+</folderInfo>
+<sourceEntries>
+<entry excluding="adc_zu_can.asm" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+</sourceEntries>
+</configuration>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping">
+<project-mappings>
+<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.asmSource" language="com.ifx.XC800.xc800asmlanguage"/>
+<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cHeader" language="com.ifx.XC800.xc800language"/>
+<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cSource" language="com.ifx.XC800.xc800language"/>
+<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cxxSource" language="com.ifx.XC800.xc800language"/>
+</project-mappings>
+</storageModule>
+</cconfiguration>
+<cconfiguration id="com.ifx.xc800.appRelease.505011587">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ifx.xc800.appRelease.505011587" moduleId="org.eclipse.cdt.core.settings" name="Release">
+<externalSettings/>
+<extensions>
+<extension id="com.ifx.xc800.errorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="hex" artifactName="adc_zu_can" buildArtefactType="com.ifx.xc800.appBuildArtefactType" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=com.ifx.xc800.appBuildArtefactType" cleanCommand="del /F" description="" errorParsers="com.ifx.xc800.errorParser" id="com.ifx.xc800.appRelease.505011587" name="Release" parent="com.ifx.xc800.appRelease">
+<folderInfo id="com.ifx.xc800.appRelease.505011587." name="/" resourcePath="">
+<toolChain errorParsers="" id="com.ifx.xc800.appRelease.toolChain.1793213603" name="XC800 Application Tool Chain" superClass="com.ifx.xc800.appRelease.toolChain">
+<option id="com.ifx.xc800.globalCategory.targetPath.14449268" name="Target Path" superClass="com.ifx.xc800.globalCategory.targetPath" value="/ProcessorsInfo/XC800/XC886 \ XC888/XC888CLM-8FF" valueType="string"/>
+<option id="com.ifx.xc800.globalCategory.targetName.2095153773" name="Target Name" superClass="com.ifx.xc800.globalCategory.targetName" value="XC888CLM-8FF" valueType="string"/>
+<option id="com.ifx.xc800.globalCategory.siliconBugInfoList.1294621119" name="Silicon Bug Info List" superClass="com.ifx.xc800.globalCategory.siliconBugInfoList" value="&lt;SiliconBugInfoList&gt;&#13;&#10;    &lt;SiliconBugInfo checked=&quot;FALSE&quot; description=&quot;Hardware Cache Miss. A NOP instruction will be generated before and after movc a,@a+dptr instruction&quot; flag=&quot;--hwc-wa&quot; id=&quot;XC800.002&quot;/&gt;&#13;&#10;&lt;/SiliconBugInfoList&gt;&#13;&#10;" valueType="string"/>
+<targetPlatform id="com.ifx.xc800.appRelease.505011587..1928362458" name=""/>
+<builder buildPath="${workspace_loc:/adc_zu_can/Release}" errorParsers="" id="com.ifx.XC800.toolchainBuilder.1508071000" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="XC800 Builder" superClass="com.ifx.XC800.toolchainBuilder"/>
+<tool errorParsers="com.ifx.xc800.errorParser" id="com.ifx.xc800.appRelease.compiler.1732938058" name="SDCC Compiler" superClass="com.ifx.xc800.appRelease.compiler">
+<inputType id="com.ifx.xc800.compiler.inputType.977332113" name="XC800 Compiler Input Type" superClass="com.ifx.xc800.compiler.inputType"/>
+</tool>
+<tool errorParsers="" id="com.ifx.xc800.appRelease.assembler.1604512541" name="SDCC Assembler" superClass="com.ifx.xc800.appRelease.assembler"/>
+<tool errorParsers="" id="com.ifx.xc800.appRelease.linker.1975664582" name="SDCC Linker" superClass="com.ifx.xc800.appRelease.linker">
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.xramEnd.1638752997" name="XRAM end address in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.xramEnd" value="0xF5FF" valueType="string"/>
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.xramStart.1718911619" name="XRAM start address in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.xramStart" value="0xF000" valueType="string"/>
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.rom1Start.1933293243" name="Flash/ROM1 start address in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.rom1Start" value="0x000" valueType="string"/>
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.rom1End.1649412943" name="Flash/ROM1 end address in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.rom1End" value="0x7FFF" valueType="string"/>
+<option id="com.ifx.xc800.appLinker.optionCategory.memory.psegStart.1680749077" name="PSEG (XRAM) start location in hex (0xNNNN)" superClass="com.ifx.xc800.appLinker.optionCategory.memory.psegStart" value="0xF000" valueType="string"/>
+<inputType id="com.ifx.xc800.appLinker.inputType.1494042737" name="XC800 Application Linker Input Type" superClass="com.ifx.xc800.appLinker.inputType"/>
+</tool>
+</toolChain>
+</folderInfo>
+<sourceEntries>
+<entry excluding="adc_zu_can.asm" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+</sourceEntries>
+</configuration>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping">
+<project-mappings>
+<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.asmSource" language="com.ifx.XC800.xc800asmlanguage"/>
+<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cHeader" language="com.ifx.XC800.xc800language"/>
+<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cSource" language="com.ifx.XC800.xc800language"/>
+<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cxxSource" language="com.ifx.XC800.xc800language"/>
+</project-mappings>
+</storageModule>
+</cconfiguration>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<project id="adc_zu_can.com.ifx.xc800.appProject.750428220" name="Application Project" projectType="com.ifx.xc800.appProject"/>
+</storageModule>
+</cproject>

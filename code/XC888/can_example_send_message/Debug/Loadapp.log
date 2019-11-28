@@ -1,0 +1,35 @@
+
+HiTOP5 symbol loader for SDCC 8051 Compiler (CDB format) 
+Copyright (c) 1997-2006          Hitex Development Tools GmbH
+
+
+Version: 5.40.832.0 (BE: Mar  3 2010, FE: Dec  9 2010)
+ 
+Include module "_SFRs" 
+Include module "MAIN" 
+Include module "CAN" 
+Include module "IO" 
+Include module "SHARED_INT" 
+Include module "T2" 
+Include module "MemInitxc88x" 
+Include module "startupxc886" 
+
+Writing blocks 
+Writing symbols 
+
+
+Object file statistic
+---------------------
+Code Size:     0
+Publics:       421
+Types:         103
+Modules:       8
+Symbols:       696
+Source files:  7
+Source lines:  1990
+ 
+
+
+Object File "C:\Users\teufel\GitHub\beuth-ipl\code\XC888\can_example_send_message\Debug\can_example.cdb" successfully processed
+
+Used memory:    2454 kByte,    Used disk space:    0 kByte 

@@ -1,0 +1,2715 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : free open source ANSI-C Compiler
+                              3 ; Version 2.9.0 #5416 (Feb  7 2011) (MSVC)
+                              4 ; This file was generated Thu Nov 28 10:57:42 2019
+                              5 ;--------------------------------------------------------
+                              6 	.module CAN
+                              7 	.optsdcc -mxc800 --model-small
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _P4_7
+                             13 	.globl _P4_6
+                             14 	.globl _P4_5
+                             15 	.globl _P4_4
+                             16 	.globl _P4_3
+                             17 	.globl _P4_2
+                             18 	.globl _P4_1
+                             19 	.globl _P4_0
+                             20 	.globl _P3_7
+                             21 	.globl _P3_6
+                             22 	.globl _P3_5
+                             23 	.globl _P3_4
+                             24 	.globl _P3_3
+                             25 	.globl _P3_2
+                             26 	.globl _P3_1
+                             27 	.globl _P3_0
+                             28 	.globl _P2_7
+                             29 	.globl _P2_6
+                             30 	.globl _P2_5
+                             31 	.globl _P2_4
+                             32 	.globl _P2_3
+                             33 	.globl _P2_2
+                             34 	.globl _P2_1
+                             35 	.globl _P2_0
+                             36 	.globl _P1_7
+                             37 	.globl _P1_6
+                             38 	.globl _P1_5
+                             39 	.globl _P1_4
+                             40 	.globl _P1_3
+                             41 	.globl _P1_2
+                             42 	.globl _P1_1
+                             43 	.globl _P1_0
+                             44 	.globl _P0_7
+                             45 	.globl _P0_6
+                             46 	.globl _P0_5
+                             47 	.globl _P0_4
+                             48 	.globl _P0_3
+                             49 	.globl _P0_2
+                             50 	.globl _P0_1
+                             51 	.globl _P0_0
+                             52 	.globl _TI_1
+                             53 	.globl _TB8_1
+                             54 	.globl _SM2_1
+                             55 	.globl _SM1_1
+                             56 	.globl _SM0_1
+                             57 	.globl _RI_1
+                             58 	.globl _REN_1
+                             59 	.globl _RB8_1
+                             60 	.globl _TR1
+                             61 	.globl _TR0
+                             62 	.globl _TF1
+                             63 	.globl _TF0
+                             64 	.globl _IT1
+                             65 	.globl _IT0
+                             66 	.globl _IE1
+                             67 	.globl _IE0
+                             68 	.globl _TR2
+                             69 	.globl _TF2
+                             70 	.globl _EXF2
+                             71 	.globl _EXEN2
+                             72 	.globl _CP_RL2
+                             73 	.globl _C_T2
+                             74 	.globl _TI
+                             75 	.globl _TB8
+                             76 	.globl _SM2
+                             77 	.globl _SM1
+                             78 	.globl _SM0
+                             79 	.globl _RI
+                             80 	.globl _REN
+                             81 	.globl _RB8
+                             82 	.globl _RS1
+                             83 	.globl _RS0
+                             84 	.globl _P
+                             85 	.globl _OV
+                             86 	.globl _F1
+                             87 	.globl _F0
+                             88 	.globl _CY
+                             89 	.globl _AC
+                             90 	.globl _MDU_BSY
+                             91 	.globl _IRDY
+                             92 	.globl _IERR
+                             93 	.globl _PX1
+                             94 	.globl _PX0
+                             95 	.globl _PT2
+                             96 	.globl _PT1
+                             97 	.globl _PT0
+                             98 	.globl _PS
+                             99 	.globl _PXM
+                            100 	.globl _PX2
+                            101 	.globl _PSSC
+                            102 	.globl _PCCIP3
+                            103 	.globl _PCCIP2
+                            104 	.globl _PCCIP1
+                            105 	.globl _PCCIP0
+                            106 	.globl _PADC
+                            107 	.globl _EXM
+                            108 	.globl _EX2
+                            109 	.globl _ESSC
+                            110 	.globl _ECCIP3
+                            111 	.globl _ECCIP2
+                            112 	.globl _ECCIP1
+                            113 	.globl _ECCIP0
+                            114 	.globl _EADC
+                            115 	.globl _EX1
+                            116 	.globl _EX0
+                            117 	.globl _ET2
+                            118 	.globl _ET1
+                            119 	.globl _ET0
+                            120 	.globl _ES
+                            121 	.globl _EA
+                            122 	.globl _KEEPZ
+                            123 	.globl _KEEPY
+                            124 	.globl _KEEPX
+                            125 	.globl _INT_EN
+                            126 	.globl _ERROR
+                            127 	.globl _EOC
+                            128 	.globl _DMAP
+                            129 	.globl _CD_BSY
+                            130 	.globl _T2_T2LH
+                            131 	.globl _T2_RC2LH
+                            132 	.globl _CCU6_T13PRLH
+                            133 	.globl _CCU6_T13LH
+                            134 	.globl _CCU6_T12PRLH
+                            135 	.globl _CCU6_T12LH
+                            136 	.globl _CCU6_CC63SRLH
+                            137 	.globl _CCU6_CC63RLH
+                            138 	.globl _CCU6_CC62SRLH
+                            139 	.globl _CCU6_CC62RLH
+                            140 	.globl _CCU6_CC61SRLH
+                            141 	.globl _CCU6_CC61RLH
+                            142 	.globl _CCU6_CC60SRLH
+                            143 	.globl _CCU6_CC60RLH
+                            144 	.globl _ADC_RESRA3LH
+                            145 	.globl _ADC_RESRA2LH
+                            146 	.globl _ADC_RESRA1LH
+                            147 	.globl _ADC_RESRA0LH
+                            148 	.globl _ADC_RESR3LH
+                            149 	.globl _ADC_RESR2LH
+                            150 	.globl _ADC_RESR1LH
+                            151 	.globl _ADC_RESR0LH
+                            152 	.globl _XADDRH
+                            153 	.globl _WDTWINB
+                            154 	.globl _WDTREL
+                            155 	.globl _WDTL
+                            156 	.globl _WDTH
+                            157 	.globl _WDTCON
+                            158 	.globl _UART1_SCON
+                            159 	.globl _UART1_SBUF
+                            160 	.globl _UART1_FDSTEP
+                            161 	.globl _UART1_FDRES
+                            162 	.globl _UART1_FDCON
+                            163 	.globl _UART1_BG
+                            164 	.globl _UART1_BCON
+                            165 	.globl _TMOD
+                            166 	.globl _TL1
+                            167 	.globl _TL0
+                            168 	.globl _TH1
+                            169 	.globl _TH0
+                            170 	.globl _TCON
+                            171 	.globl _T2_T2MOD
+                            172 	.globl _T2_T2L
+                            173 	.globl _T2_T2H
+                            174 	.globl _T2_T2CON
+                            175 	.globl _T2_RC2L
+                            176 	.globl _T2_RC2H
+                            177 	.globl _T21_T2MOD
+                            178 	.globl _T21_T2L
+                            179 	.globl _T21_T2H
+                            180 	.globl _T21_T2CON
+                            181 	.globl _T21_RC2L
+                            182 	.globl _T21_RC2H
+                            183 	.globl _SYSCON0
+                            184 	.globl _SSC_TBL
+                            185 	.globl _SSC_RBL
+                            186 	.globl _SSC_PISEL
+                            187 	.globl _SSC_CONL_P
+                            188 	.globl _SSC_CONL_O
+                            189 	.globl _SSC_CONH_P
+                            190 	.globl _SSC_CONH_O
+                            191 	.globl _SSC_BRL
+                            192 	.globl _SSC_BRH
+                            193 	.globl _SP
+                            194 	.globl _SCU_PAGE
+                            195 	.globl _SCON
+                            196 	.globl _SBUF
+                            197 	.globl _PSW
+                            198 	.globl _PORT_PAGE
+                            199 	.globl _PMCON2
+                            200 	.globl _PMCON1
+                            201 	.globl _PMCON0
+                            202 	.globl _PLL_CON
+                            203 	.globl _PCON
+                            204 	.globl _PASSWD
+                            205 	.globl _P5_PUDSEL
+                            206 	.globl _P5_PUDEN
+                            207 	.globl _P5_OD
+                            208 	.globl _P5_DIR
+                            209 	.globl _P5_DATA
+                            210 	.globl _P5_ALTSEL1
+                            211 	.globl _P5_ALTSEL0
+                            212 	.globl _P4_PUDSEL
+                            213 	.globl _P4_PUDEN
+                            214 	.globl _P4_OD
+                            215 	.globl _P4_DIR
+                            216 	.globl _P4_DATA
+                            217 	.globl _P4_ALTSEL1
+                            218 	.globl _P4_ALTSEL0
+                            219 	.globl _P3_PUDSEL
+                            220 	.globl _P3_PUDEN
+                            221 	.globl _P3_OD
+                            222 	.globl _P3_DIR
+                            223 	.globl _P3_DATA
+                            224 	.globl _P3_ALTSEL1
+                            225 	.globl _P3_ALTSEL0
+                            226 	.globl _P2_PUDSEL
+                            227 	.globl _P2_PUDEN
+                            228 	.globl _P2_DIR
+                            229 	.globl _P2_DATA
+                            230 	.globl _P1_PUDSEL
+                            231 	.globl _P1_PUDEN
+                            232 	.globl _P1_OD
+                            233 	.globl _P1_DIR
+                            234 	.globl _P1_DATA
+                            235 	.globl _P1_ALTSEL1
+                            236 	.globl _P1_ALTSEL0
+                            237 	.globl _P0_PUDSEL
+                            238 	.globl _P0_PUDEN
+                            239 	.globl _P0_OD
+                            240 	.globl _P0_DIR
+                            241 	.globl _P0_DATA
+                            242 	.globl _P0_ALTSEL1
+                            243 	.globl _P0_ALTSEL0
+                            244 	.globl _OSC_CON
+                            245 	.globl _NMISR
+                            246 	.globl _NMICON
+                            247 	.globl _MODSUSP
+                            248 	.globl _MODPISEL2
+                            249 	.globl _MODPISEL1
+                            250 	.globl _MODPISEL
+                            251 	.globl _MMWR2
+                            252 	.globl _MMWR1
+                            253 	.globl _MMSR
+                            254 	.globl _MMICR
+                            255 	.globl _MMDR
+                            256 	.globl _MMCR2
+                            257 	.globl _MMCR
+                            258 	.globl _MMBPCR
+                            259 	.globl _MISC_CON
+                            260 	.globl _MDU_MR5
+                            261 	.globl _MDU_MR4
+                            262 	.globl _MDU_MR3
+                            263 	.globl _MDU_MR2
+                            264 	.globl _MDU_MR1
+                            265 	.globl _MDU_MR0
+                            266 	.globl _MDU_MDUSTAT
+                            267 	.globl _MDU_MDUCON
+                            268 	.globl _MDU_MD5
+                            269 	.globl _MDU_MD4
+                            270 	.globl _MDU_MD3
+                            271 	.globl _MDU_MD2
+                            272 	.globl _MDU_MD1
+                            273 	.globl _MDU_MD0
+                            274 	.globl _IRCON4
+                            275 	.globl _IRCON3
+                            276 	.globl _IRCON2
+                            277 	.globl _IRCON1
+                            278 	.globl _IRCON0
+                            279 	.globl _IPH1
+                            280 	.globl _IPH
+                            281 	.globl _IP1
+                            282 	.globl _IP
+                            283 	.globl _IEN1
+                            284 	.globl _IEN0
+                            285 	.globl _ID
+                            286 	.globl _HWBPSR
+                            287 	.globl _HWBPDR
+                            288 	.globl _FEAL
+                            289 	.globl _FEAH
+                            290 	.globl _FDSTEP
+                            291 	.globl _FDRES
+                            292 	.globl _FDCON
+                            293 	.globl _EXICON1
+                            294 	.globl _EXICON0
+                            295 	.globl _EO
+                            296 	.globl _DPL
+                            297 	.globl _DPH
+                            298 	.globl _COCON
+                            299 	.globl _CMCON
+                            300 	.globl _CD_STATC
+                            301 	.globl _CD_CORDZL
+                            302 	.globl _CD_CORDZH
+                            303 	.globl _CD_CORDYL
+                            304 	.globl _CD_CORDYH
+                            305 	.globl _CD_CORDXL
+                            306 	.globl _CD_CORDXH
+                            307 	.globl _CD_CON
+                            308 	.globl _CCU6_TRPCTRL
+                            309 	.globl _CCU6_TRPCTRH
+                            310 	.globl _CCU6_TCTR4L
+                            311 	.globl _CCU6_TCTR4H
+                            312 	.globl _CCU6_TCTR2L
+                            313 	.globl _CCU6_TCTR2H
+                            314 	.globl _CCU6_TCTR0L
+                            315 	.globl _CCU6_TCTR0H
+                            316 	.globl _CCU6_T13PRL
+                            317 	.globl _CCU6_T13PRH
+                            318 	.globl _CCU6_T13L
+                            319 	.globl _CCU6_T13H
+                            320 	.globl _CCU6_T12PRL
+                            321 	.globl _CCU6_T12PRH
+                            322 	.globl _CCU6_T12MSELL
+                            323 	.globl _CCU6_T12MSELH
+                            324 	.globl _CCU6_T12L
+                            325 	.globl _CCU6_T12H
+                            326 	.globl _CCU6_T12DTCL
+                            327 	.globl _CCU6_T12DTCH
+                            328 	.globl _CCU6_PSLR
+                            329 	.globl _CCU6_PISEL2
+                            330 	.globl _CCU6_PISEL0L
+                            331 	.globl _CCU6_PISEL0H
+                            332 	.globl _CCU6_PAGE
+                            333 	.globl _CCU6_MODCTRL
+                            334 	.globl _CCU6_MODCTRH
+                            335 	.globl _CCU6_MCMOUTSL
+                            336 	.globl _CCU6_MCMOUTSH
+                            337 	.globl _CCU6_MCMOUTL
+                            338 	.globl _CCU6_MCMOUTH
+                            339 	.globl _CCU6_MCMCTR
+                            340 	.globl _CCU6_ISSL
+                            341 	.globl _CCU6_ISSH
+                            342 	.globl _CCU6_ISRL
+                            343 	.globl _CCU6_ISRH
+                            344 	.globl _CCU6_ISL
+                            345 	.globl _CCU6_ISH
+                            346 	.globl _CCU6_INPL
+                            347 	.globl _CCU6_INPH
+                            348 	.globl _CCU6_IENL
+                            349 	.globl _CCU6_IENH
+                            350 	.globl _CCU6_CMPSTATL
+                            351 	.globl _CCU6_CMPSTATH
+                            352 	.globl _CCU6_CMPMODIFL
+                            353 	.globl _CCU6_CMPMODIFH
+                            354 	.globl _CCU6_CC63SRL
+                            355 	.globl _CCU6_CC63SRH
+                            356 	.globl _CCU6_CC63RL
+                            357 	.globl _CCU6_CC63RH
+                            358 	.globl _CCU6_CC62SRL
+                            359 	.globl _CCU6_CC62SRH
+                            360 	.globl _CCU6_CC62RL
+                            361 	.globl _CCU6_CC62RH
+                            362 	.globl _CCU6_CC61SRL
+                            363 	.globl _CCU6_CC61SRH
+                            364 	.globl _CCU6_CC61RL
+                            365 	.globl _CCU6_CC61RH
+                            366 	.globl _CCU6_CC60SRL
+                            367 	.globl _CCU6_CC60SRH
+                            368 	.globl _CCU6_CC60RL
+                            369 	.globl _CCU6_CC60RH
+                            370 	.globl _CAN_DATA3
+                            371 	.globl _CAN_DATA2
+                            372 	.globl _CAN_DATA1
+                            373 	.globl _CAN_DATA0
+                            374 	.globl _CAN_ADL
+                            375 	.globl _CAN_ADH
+                            376 	.globl _CAN_ADCON
+                            377 	.globl _BG
+                            378 	.globl _BCON
+                            379 	.globl _B
+                            380 	.globl _ADC_VFCR
+                            381 	.globl _ADC_RESRA3L
+                            382 	.globl _ADC_RESRA3H
+                            383 	.globl _ADC_RESRA2L
+                            384 	.globl _ADC_RESRA2H
+                            385 	.globl _ADC_RESRA1L
+                            386 	.globl _ADC_RESRA1H
+                            387 	.globl _ADC_RESRA0L
+                            388 	.globl _ADC_RESRA0H
+                            389 	.globl _ADC_RESR3L
+                            390 	.globl _ADC_RESR3H
+                            391 	.globl _ADC_RESR2L
+                            392 	.globl _ADC_RESR2H
+                            393 	.globl _ADC_RESR1L
+                            394 	.globl _ADC_RESR1H
+                            395 	.globl _ADC_RESR0L
+                            396 	.globl _ADC_RESR0H
+                            397 	.globl _ADC_RCR3
+                            398 	.globl _ADC_RCR2
+                            399 	.globl _ADC_RCR1
+                            400 	.globl _ADC_RCR0
+                            401 	.globl _ADC_QSR0
+                            402 	.globl _ADC_QMR0
+                            403 	.globl _ADC_QINR0
+                            404 	.globl _ADC_QBUR0
+                            405 	.globl _ADC_Q0R0
+                            406 	.globl _ADC_PRAR
+                            407 	.globl _ADC_PAGE
+                            408 	.globl _ADC_LCBR
+                            409 	.globl _ADC_INPCR0
+                            410 	.globl _ADC_GLOBSTR
+                            411 	.globl _ADC_GLOBCTR
+                            412 	.globl _ADC_EVINSR
+                            413 	.globl _ADC_EVINPR
+                            414 	.globl _ADC_EVINFR
+                            415 	.globl _ADC_EVINCR
+                            416 	.globl _ADC_ETRCR
+                            417 	.globl _ADC_CRPR1
+                            418 	.globl _ADC_CRMR1
+                            419 	.globl _ADC_CRCR1
+                            420 	.globl _ADC_CHINSR
+                            421 	.globl _ADC_CHINPR
+                            422 	.globl _ADC_CHINFR
+                            423 	.globl _ADC_CHINCR
+                            424 	.globl _ADC_CHCTR7
+                            425 	.globl _ADC_CHCTR6
+                            426 	.globl _ADC_CHCTR5
+                            427 	.globl _ADC_CHCTR4
+                            428 	.globl _ADC_CHCTR3
+                            429 	.globl _ADC_CHCTR2
+                            430 	.globl _ADC_CHCTR1
+                            431 	.globl _ADC_CHCTR0
+                            432 	.globl _ACC
+                            433 	.globl _CAN_vLoadData_PARM_2
+                            434 	.globl _CAN_vGetMsgObj_PARM_2
+                            435 	.globl _CAN_vInit
+                            436 	.globl _CAN_vWriteAMData
+                            437 	.globl _CAN_vSetListCommand
+                            438 	.globl _CAN_vGetMsgObj
+                            439 	.globl _CAN_vTransmit
+                            440 	.globl _CAN_vLoadData
+                            441 ;--------------------------------------------------------
+                            442 ; special function registers
+                            443 ;--------------------------------------------------------
+                            444 	.area RSEG    (DATA)
+                    00E0    445 G$ACC$0$0 == 0x00e0
+                    00E0    446 _ACC	=	0x00e0
+                    00CA    447 G$ADC_CHCTR0$0$0 == 0x00ca
+                    00CA    448 _ADC_CHCTR0	=	0x00ca
+                    00CB    449 G$ADC_CHCTR1$0$0 == 0x00cb
+                    00CB    450 _ADC_CHCTR1	=	0x00cb
+                    00CC    451 G$ADC_CHCTR2$0$0 == 0x00cc
+                    00CC    452 _ADC_CHCTR2	=	0x00cc
+                    00CD    453 G$ADC_CHCTR3$0$0 == 0x00cd
+                    00CD    454 _ADC_CHCTR3	=	0x00cd
+                    00CE    455 G$ADC_CHCTR4$0$0 == 0x00ce
+                    00CE    456 _ADC_CHCTR4	=	0x00ce
+                    00CF    457 G$ADC_CHCTR5$0$0 == 0x00cf
+                    00CF    458 _ADC_CHCTR5	=	0x00cf
+                    00D2    459 G$ADC_CHCTR6$0$0 == 0x00d2
+                    00D2    460 _ADC_CHCTR6	=	0x00d2
+                    00D3    461 G$ADC_CHCTR7$0$0 == 0x00d3
+                    00D3    462 _ADC_CHCTR7	=	0x00d3
+                    00CB    463 G$ADC_CHINCR$0$0 == 0x00cb
+                    00CB    464 _ADC_CHINCR	=	0x00cb
+                    00CA    465 G$ADC_CHINFR$0$0 == 0x00ca
+                    00CA    466 _ADC_CHINFR	=	0x00ca
+                    00CD    467 G$ADC_CHINPR$0$0 == 0x00cd
+                    00CD    468 _ADC_CHINPR	=	0x00cd
+                    00CC    469 G$ADC_CHINSR$0$0 == 0x00cc
+                    00CC    470 _ADC_CHINSR	=	0x00cc
+                    00CA    471 G$ADC_CRCR1$0$0 == 0x00ca
+                    00CA    472 _ADC_CRCR1	=	0x00ca
+                    00CC    473 G$ADC_CRMR1$0$0 == 0x00cc
+                    00CC    474 _ADC_CRMR1	=	0x00cc
+                    00CB    475 G$ADC_CRPR1$0$0 == 0x00cb
+                    00CB    476 _ADC_CRPR1	=	0x00cb
+                    00CF    477 G$ADC_ETRCR$0$0 == 0x00cf
+                    00CF    478 _ADC_ETRCR	=	0x00cf
+                    00CF    479 G$ADC_EVINCR$0$0 == 0x00cf
+                    00CF    480 _ADC_EVINCR	=	0x00cf
+                    00CE    481 G$ADC_EVINFR$0$0 == 0x00ce
+                    00CE    482 _ADC_EVINFR	=	0x00ce
+                    00D3    483 G$ADC_EVINPR$0$0 == 0x00d3
+                    00D3    484 _ADC_EVINPR	=	0x00d3
+                    00D2    485 G$ADC_EVINSR$0$0 == 0x00d2
+                    00D2    486 _ADC_EVINSR	=	0x00d2
+                    00CA    487 G$ADC_GLOBCTR$0$0 == 0x00ca
+                    00CA    488 _ADC_GLOBCTR	=	0x00ca
+                    00CB    489 G$ADC_GLOBSTR$0$0 == 0x00cb
+                    00CB    490 _ADC_GLOBSTR	=	0x00cb
+                    00CE    491 G$ADC_INPCR0$0$0 == 0x00ce
+                    00CE    492 _ADC_INPCR0	=	0x00ce
+                    00CD    493 G$ADC_LCBR$0$0 == 0x00cd
+                    00CD    494 _ADC_LCBR	=	0x00cd
+                    00D1    495 G$ADC_PAGE$0$0 == 0x00d1
+                    00D1    496 _ADC_PAGE	=	0x00d1
+                    00CC    497 G$ADC_PRAR$0$0 == 0x00cc
+                    00CC    498 _ADC_PRAR	=	0x00cc
+                    00CF    499 G$ADC_Q0R0$0$0 == 0x00cf
+                    00CF    500 _ADC_Q0R0	=	0x00cf
+                    00D2    501 G$ADC_QBUR0$0$0 == 0x00d2
+                    00D2    502 _ADC_QBUR0	=	0x00d2
+                    00D2    503 G$ADC_QINR0$0$0 == 0x00d2
+                    00D2    504 _ADC_QINR0	=	0x00d2
+                    00CD    505 G$ADC_QMR0$0$0 == 0x00cd
+                    00CD    506 _ADC_QMR0	=	0x00cd
+                    00CE    507 G$ADC_QSR0$0$0 == 0x00ce
+                    00CE    508 _ADC_QSR0	=	0x00ce
+                    00CA    509 G$ADC_RCR0$0$0 == 0x00ca
+                    00CA    510 _ADC_RCR0	=	0x00ca
+                    00CB    511 G$ADC_RCR1$0$0 == 0x00cb
+                    00CB    512 _ADC_RCR1	=	0x00cb
+                    00CC    513 G$ADC_RCR2$0$0 == 0x00cc
+                    00CC    514 _ADC_RCR2	=	0x00cc
+                    00CD    515 G$ADC_RCR3$0$0 == 0x00cd
+                    00CD    516 _ADC_RCR3	=	0x00cd
+                    00CB    517 G$ADC_RESR0H$0$0 == 0x00cb
+                    00CB    518 _ADC_RESR0H	=	0x00cb
+                    00CA    519 G$ADC_RESR0L$0$0 == 0x00ca
+                    00CA    520 _ADC_RESR0L	=	0x00ca
+                    00CD    521 G$ADC_RESR1H$0$0 == 0x00cd
+                    00CD    522 _ADC_RESR1H	=	0x00cd
+                    00CC    523 G$ADC_RESR1L$0$0 == 0x00cc
+                    00CC    524 _ADC_RESR1L	=	0x00cc
+                    00CF    525 G$ADC_RESR2H$0$0 == 0x00cf
+                    00CF    526 _ADC_RESR2H	=	0x00cf
+                    00CE    527 G$ADC_RESR2L$0$0 == 0x00ce
+                    00CE    528 _ADC_RESR2L	=	0x00ce
+                    00D3    529 G$ADC_RESR3H$0$0 == 0x00d3
+                    00D3    530 _ADC_RESR3H	=	0x00d3
+                    00D2    531 G$ADC_RESR3L$0$0 == 0x00d2
+                    00D2    532 _ADC_RESR3L	=	0x00d2
+                    00CB    533 G$ADC_RESRA0H$0$0 == 0x00cb
+                    00CB    534 _ADC_RESRA0H	=	0x00cb
+                    00CA    535 G$ADC_RESRA0L$0$0 == 0x00ca
+                    00CA    536 _ADC_RESRA0L	=	0x00ca
+                    00CD    537 G$ADC_RESRA1H$0$0 == 0x00cd
+                    00CD    538 _ADC_RESRA1H	=	0x00cd
+                    00CC    539 G$ADC_RESRA1L$0$0 == 0x00cc
+                    00CC    540 _ADC_RESRA1L	=	0x00cc
+                    00CF    541 G$ADC_RESRA2H$0$0 == 0x00cf
+                    00CF    542 _ADC_RESRA2H	=	0x00cf
+                    00CE    543 G$ADC_RESRA2L$0$0 == 0x00ce
+                    00CE    544 _ADC_RESRA2L	=	0x00ce
+                    00D3    545 G$ADC_RESRA3H$0$0 == 0x00d3
+                    00D3    546 _ADC_RESRA3H	=	0x00d3
+                    00D2    547 G$ADC_RESRA3L$0$0 == 0x00d2
+                    00D2    548 _ADC_RESRA3L	=	0x00d2
+                    00CE    549 G$ADC_VFCR$0$0 == 0x00ce
+                    00CE    550 _ADC_VFCR	=	0x00ce
+                    00F0    551 G$B$0$0 == 0x00f0
+                    00F0    552 _B	=	0x00f0
+                    00BD    553 G$BCON$0$0 == 0x00bd
+                    00BD    554 _BCON	=	0x00bd
+                    00BE    555 G$BG$0$0 == 0x00be
+                    00BE    556 _BG	=	0x00be
+                    00D8    557 G$CAN_ADCON$0$0 == 0x00d8
+                    00D8    558 _CAN_ADCON	=	0x00d8
+                    00DA    559 G$CAN_ADH$0$0 == 0x00da
+                    00DA    560 _CAN_ADH	=	0x00da
+                    00D9    561 G$CAN_ADL$0$0 == 0x00d9
+                    00D9    562 _CAN_ADL	=	0x00d9
+                    00DB    563 G$CAN_DATA0$0$0 == 0x00db
+                    00DB    564 _CAN_DATA0	=	0x00db
+                    00DC    565 G$CAN_DATA1$0$0 == 0x00dc
+                    00DC    566 _CAN_DATA1	=	0x00dc
+                    00DD    567 G$CAN_DATA2$0$0 == 0x00dd
+                    00DD    568 _CAN_DATA2	=	0x00dd
+                    00DE    569 G$CAN_DATA3$0$0 == 0x00de
+                    00DE    570 _CAN_DATA3	=	0x00de
+                    00FB    571 G$CCU6_CC60RH$0$0 == 0x00fb
+                    00FB    572 _CCU6_CC60RH	=	0x00fb
+                    00FA    573 G$CCU6_CC60RL$0$0 == 0x00fa
+                    00FA    574 _CCU6_CC60RL	=	0x00fa
+                    00FB    575 G$CCU6_CC60SRH$0$0 == 0x00fb
+                    00FB    576 _CCU6_CC60SRH	=	0x00fb
+                    00FA    577 G$CCU6_CC60SRL$0$0 == 0x00fa
+                    00FA    578 _CCU6_CC60SRL	=	0x00fa
+                    00FD    579 G$CCU6_CC61RH$0$0 == 0x00fd
+                    00FD    580 _CCU6_CC61RH	=	0x00fd
+                    00FC    581 G$CCU6_CC61RL$0$0 == 0x00fc
+                    00FC    582 _CCU6_CC61RL	=	0x00fc
+                    00FD    583 G$CCU6_CC61SRH$0$0 == 0x00fd
+                    00FD    584 _CCU6_CC61SRH	=	0x00fd
+                    00FC    585 G$CCU6_CC61SRL$0$0 == 0x00fc
+                    00FC    586 _CCU6_CC61SRL	=	0x00fc
+                    00FF    587 G$CCU6_CC62RH$0$0 == 0x00ff
+                    00FF    588 _CCU6_CC62RH	=	0x00ff
+                    00FE    589 G$CCU6_CC62RL$0$0 == 0x00fe
+                    00FE    590 _CCU6_CC62RL	=	0x00fe
+                    00FF    591 G$CCU6_CC62SRH$0$0 == 0x00ff
+                    00FF    592 _CCU6_CC62SRH	=	0x00ff
+                    00FE    593 G$CCU6_CC62SRL$0$0 == 0x00fe
+                    00FE    594 _CCU6_CC62SRL	=	0x00fe
+                    009B    595 G$CCU6_CC63RH$0$0 == 0x009b
+                    009B    596 _CCU6_CC63RH	=	0x009b
+                    009A    597 G$CCU6_CC63RL$0$0 == 0x009a
+                    009A    598 _CCU6_CC63RL	=	0x009a
+                    009B    599 G$CCU6_CC63SRH$0$0 == 0x009b
+                    009B    600 _CCU6_CC63SRH	=	0x009b
+                    009A    601 G$CCU6_CC63SRL$0$0 == 0x009a
+                    009A    602 _CCU6_CC63SRL	=	0x009a
+                    00A7    603 G$CCU6_CMPMODIFH$0$0 == 0x00a7
+                    00A7    604 _CCU6_CMPMODIFH	=	0x00a7
+                    00A6    605 G$CCU6_CMPMODIFL$0$0 == 0x00a6
+                    00A6    606 _CCU6_CMPMODIFL	=	0x00a6
+                    00FF    607 G$CCU6_CMPSTATH$0$0 == 0x00ff
+                    00FF    608 _CCU6_CMPSTATH	=	0x00ff
+                    00FE    609 G$CCU6_CMPSTATL$0$0 == 0x00fe
+                    00FE    610 _CCU6_CMPSTATL	=	0x00fe
+                    009D    611 G$CCU6_IENH$0$0 == 0x009d
+                    009D    612 _CCU6_IENH	=	0x009d
+                    009C    613 G$CCU6_IENL$0$0 == 0x009c
+                    009C    614 _CCU6_IENL	=	0x009c
+                    009F    615 G$CCU6_INPH$0$0 == 0x009f
+                    009F    616 _CCU6_INPH	=	0x009f
+                    009E    617 G$CCU6_INPL$0$0 == 0x009e
+                    009E    618 _CCU6_INPL	=	0x009e
+                    009D    619 G$CCU6_ISH$0$0 == 0x009d
+                    009D    620 _CCU6_ISH	=	0x009d
+                    009C    621 G$CCU6_ISL$0$0 == 0x009c
+                    009C    622 _CCU6_ISL	=	0x009c
+                    00A5    623 G$CCU6_ISRH$0$0 == 0x00a5
+                    00A5    624 _CCU6_ISRH	=	0x00a5
+                    00A4    625 G$CCU6_ISRL$0$0 == 0x00a4
+                    00A4    626 _CCU6_ISRL	=	0x00a4
+                    00A5    627 G$CCU6_ISSH$0$0 == 0x00a5
+                    00A5    628 _CCU6_ISSH	=	0x00a5
+                    00A4    629 G$CCU6_ISSL$0$0 == 0x00a4
+                    00A4    630 _CCU6_ISSL	=	0x00a4
+                    00A7    631 G$CCU6_MCMCTR$0$0 == 0x00a7
+                    00A7    632 _CCU6_MCMCTR	=	0x00a7
+                    009B    633 G$CCU6_MCMOUTH$0$0 == 0x009b
+                    009B    634 _CCU6_MCMOUTH	=	0x009b
+                    009A    635 G$CCU6_MCMOUTL$0$0 == 0x009a
+                    009A    636 _CCU6_MCMOUTL	=	0x009a
+                    009F    637 G$CCU6_MCMOUTSH$0$0 == 0x009f
+                    009F    638 _CCU6_MCMOUTSH	=	0x009f
+                    009E    639 G$CCU6_MCMOUTSL$0$0 == 0x009e
+                    009E    640 _CCU6_MCMOUTSL	=	0x009e
+                    00FD    641 G$CCU6_MODCTRH$0$0 == 0x00fd
+                    00FD    642 _CCU6_MODCTRH	=	0x00fd
+                    00FC    643 G$CCU6_MODCTRL$0$0 == 0x00fc
+                    00FC    644 _CCU6_MODCTRL	=	0x00fc
+                    00A3    645 G$CCU6_PAGE$0$0 == 0x00a3
+                    00A3    646 _CCU6_PAGE	=	0x00a3
+                    009F    647 G$CCU6_PISEL0H$0$0 == 0x009f
+                    009F    648 _CCU6_PISEL0H	=	0x009f
+                    009E    649 G$CCU6_PISEL0L$0$0 == 0x009e
+                    009E    650 _CCU6_PISEL0L	=	0x009e
+                    00A4    651 G$CCU6_PISEL2$0$0 == 0x00a4
+                    00A4    652 _CCU6_PISEL2	=	0x00a4
+                    00A6    653 G$CCU6_PSLR$0$0 == 0x00a6
+                    00A6    654 _CCU6_PSLR	=	0x00a6
+                    00A5    655 G$CCU6_T12DTCH$0$0 == 0x00a5
+                    00A5    656 _CCU6_T12DTCH	=	0x00a5
+                    00A4    657 G$CCU6_T12DTCL$0$0 == 0x00a4
+                    00A4    658 _CCU6_T12DTCL	=	0x00a4
+                    00FB    659 G$CCU6_T12H$0$0 == 0x00fb
+                    00FB    660 _CCU6_T12H	=	0x00fb
+                    00FA    661 G$CCU6_T12L$0$0 == 0x00fa
+                    00FA    662 _CCU6_T12L	=	0x00fa
+                    009B    663 G$CCU6_T12MSELH$0$0 == 0x009b
+                    009B    664 _CCU6_T12MSELH	=	0x009b
+                    009A    665 G$CCU6_T12MSELL$0$0 == 0x009a
+                    009A    666 _CCU6_T12MSELL	=	0x009a
+                    009D    667 G$CCU6_T12PRH$0$0 == 0x009d
+                    009D    668 _CCU6_T12PRH	=	0x009d
+                    009C    669 G$CCU6_T12PRL$0$0 == 0x009c
+                    009C    670 _CCU6_T12PRL	=	0x009c
+                    00FD    671 G$CCU6_T13H$0$0 == 0x00fd
+                    00FD    672 _CCU6_T13H	=	0x00fd
+                    00FC    673 G$CCU6_T13L$0$0 == 0x00fc
+                    00FC    674 _CCU6_T13L	=	0x00fc
+                    009F    675 G$CCU6_T13PRH$0$0 == 0x009f
+                    009F    676 _CCU6_T13PRH	=	0x009f
+                    009E    677 G$CCU6_T13PRL$0$0 == 0x009e
+                    009E    678 _CCU6_T13PRL	=	0x009e
+                    00A7    679 G$CCU6_TCTR0H$0$0 == 0x00a7
+                    00A7    680 _CCU6_TCTR0H	=	0x00a7
+                    00A6    681 G$CCU6_TCTR0L$0$0 == 0x00a6
+                    00A6    682 _CCU6_TCTR0L	=	0x00a6
+                    00FB    683 G$CCU6_TCTR2H$0$0 == 0x00fb
+                    00FB    684 _CCU6_TCTR2H	=	0x00fb
+                    00FA    685 G$CCU6_TCTR2L$0$0 == 0x00fa
+                    00FA    686 _CCU6_TCTR2L	=	0x00fa
+                    009D    687 G$CCU6_TCTR4H$0$0 == 0x009d
+                    009D    688 _CCU6_TCTR4H	=	0x009d
+                    009C    689 G$CCU6_TCTR4L$0$0 == 0x009c
+                    009C    690 _CCU6_TCTR4L	=	0x009c
+                    00FF    691 G$CCU6_TRPCTRH$0$0 == 0x00ff
+                    00FF    692 _CCU6_TRPCTRH	=	0x00ff
+                    00FE    693 G$CCU6_TRPCTRL$0$0 == 0x00fe
+                    00FE    694 _CCU6_TRPCTRL	=	0x00fe
+                    00A1    695 G$CD_CON$0$0 == 0x00a1
+                    00A1    696 _CD_CON	=	0x00a1
+                    009B    697 G$CD_CORDXH$0$0 == 0x009b
+                    009B    698 _CD_CORDXH	=	0x009b
+                    009A    699 G$CD_CORDXL$0$0 == 0x009a
+                    009A    700 _CD_CORDXL	=	0x009a
+                    009D    701 G$CD_CORDYH$0$0 == 0x009d
+                    009D    702 _CD_CORDYH	=	0x009d
+                    009C    703 G$CD_CORDYL$0$0 == 0x009c
+                    009C    704 _CD_CORDYL	=	0x009c
+                    009F    705 G$CD_CORDZH$0$0 == 0x009f
+                    009F    706 _CD_CORDZH	=	0x009f
+                    009E    707 G$CD_CORDZL$0$0 == 0x009e
+                    009E    708 _CD_CORDZL	=	0x009e
+                    00A0    709 G$CD_STATC$0$0 == 0x00a0
+                    00A0    710 _CD_STATC	=	0x00a0
+                    00BA    711 G$CMCON$0$0 == 0x00ba
+                    00BA    712 _CMCON	=	0x00ba
+                    00BE    713 G$COCON$0$0 == 0x00be
+                    00BE    714 _COCON	=	0x00be
+                    0083    715 G$DPH$0$0 == 0x0083
+                    0083    716 _DPH	=	0x0083
+                    0082    717 G$DPL$0$0 == 0x0082
+                    0082    718 _DPL	=	0x0082
+                    00A2    719 G$EO$0$0 == 0x00a2
+                    00A2    720 _EO	=	0x00a2
+                    00B7    721 G$EXICON0$0$0 == 0x00b7
+                    00B7    722 _EXICON0	=	0x00b7
+                    00BA    723 G$EXICON1$0$0 == 0x00ba
+                    00BA    724 _EXICON1	=	0x00ba
+                    00E9    725 G$FDCON$0$0 == 0x00e9
+                    00E9    726 _FDCON	=	0x00e9
+                    00EB    727 G$FDRES$0$0 == 0x00eb
+                    00EB    728 _FDRES	=	0x00eb
+                    00EA    729 G$FDSTEP$0$0 == 0x00ea
+                    00EA    730 _FDSTEP	=	0x00ea
+                    00BD    731 G$FEAH$0$0 == 0x00bd
+                    00BD    732 _FEAH	=	0x00bd
+                    00BC    733 G$FEAL$0$0 == 0x00bc
+                    00BC    734 _FEAL	=	0x00bc
+                    00F7    735 G$HWBPDR$0$0 == 0x00f7
+                    00F7    736 _HWBPDR	=	0x00f7
+                    00F6    737 G$HWBPSR$0$0 == 0x00f6
+                    00F6    738 _HWBPSR	=	0x00f6
+                    00B3    739 G$ID$0$0 == 0x00b3
+                    00B3    740 _ID	=	0x00b3
+                    00A8    741 G$IEN0$0$0 == 0x00a8
+                    00A8    742 _IEN0	=	0x00a8
+                    00E8    743 G$IEN1$0$0 == 0x00e8
+                    00E8    744 _IEN1	=	0x00e8
+                    00B8    745 G$IP$0$0 == 0x00b8
+                    00B8    746 _IP	=	0x00b8
+                    00F8    747 G$IP1$0$0 == 0x00f8
+                    00F8    748 _IP1	=	0x00f8
+                    00B9    749 G$IPH$0$0 == 0x00b9
+                    00B9    750 _IPH	=	0x00b9
+                    00F9    751 G$IPH1$0$0 == 0x00f9
+                    00F9    752 _IPH1	=	0x00f9
+                    00B4    753 G$IRCON0$0$0 == 0x00b4
+                    00B4    754 _IRCON0	=	0x00b4
+                    00B5    755 G$IRCON1$0$0 == 0x00b5
+                    00B5    756 _IRCON1	=	0x00b5
+                    00B6    757 G$IRCON2$0$0 == 0x00b6
+                    00B6    758 _IRCON2	=	0x00b6
+                    00B4    759 G$IRCON3$0$0 == 0x00b4
+                    00B4    760 _IRCON3	=	0x00b4
+                    00B5    761 G$IRCON4$0$0 == 0x00b5
+                    00B5    762 _IRCON4	=	0x00b5
+                    00B2    763 G$MDU_MD0$0$0 == 0x00b2
+                    00B2    764 _MDU_MD0	=	0x00b2
+                    00B3    765 G$MDU_MD1$0$0 == 0x00b3
+                    00B3    766 _MDU_MD1	=	0x00b3
+                    00B4    767 G$MDU_MD2$0$0 == 0x00b4
+                    00B4    768 _MDU_MD2	=	0x00b4
+                    00B5    769 G$MDU_MD3$0$0 == 0x00b5
+                    00B5    770 _MDU_MD3	=	0x00b5
+                    00B6    771 G$MDU_MD4$0$0 == 0x00b6
+                    00B6    772 _MDU_MD4	=	0x00b6
+                    00B7    773 G$MDU_MD5$0$0 == 0x00b7
+                    00B7    774 _MDU_MD5	=	0x00b7
+                    00B1    775 G$MDU_MDUCON$0$0 == 0x00b1
+                    00B1    776 _MDU_MDUCON	=	0x00b1
+                    00B0    777 G$MDU_MDUSTAT$0$0 == 0x00b0
+                    00B0    778 _MDU_MDUSTAT	=	0x00b0
+                    00B2    779 G$MDU_MR0$0$0 == 0x00b2
+                    00B2    780 _MDU_MR0	=	0x00b2
+                    00B3    781 G$MDU_MR1$0$0 == 0x00b3
+                    00B3    782 _MDU_MR1	=	0x00b3
+                    00B4    783 G$MDU_MR2$0$0 == 0x00b4
+                    00B4    784 _MDU_MR2	=	0x00b4
+                    00B5    785 G$MDU_MR3$0$0 == 0x00b5
+                    00B5    786 _MDU_MR3	=	0x00b5
+                    00B6    787 G$MDU_MR4$0$0 == 0x00b6
+                    00B6    788 _MDU_MR4	=	0x00b6
+                    00B7    789 G$MDU_MR5$0$0 == 0x00b7
+                    00B7    790 _MDU_MR5	=	0x00b7
+                    00E9    791 G$MISC_CON$0$0 == 0x00e9
+                    00E9    792 _MISC_CON	=	0x00e9
+                    00F3    793 G$MMBPCR$0$0 == 0x00f3
+                    00F3    794 _MMBPCR	=	0x00f3
+                    00F1    795 G$MMCR$0$0 == 0x00f1
+                    00F1    796 _MMCR	=	0x00f1
+                    00E9    797 G$MMCR2$0$0 == 0x00e9
+                    00E9    798 _MMCR2	=	0x00e9
+                    00F5    799 G$MMDR$0$0 == 0x00f5
+                    00F5    800 _MMDR	=	0x00f5
+                    00F4    801 G$MMICR$0$0 == 0x00f4
+                    00F4    802 _MMICR	=	0x00f4
+                    00F2    803 G$MMSR$0$0 == 0x00f2
+                    00F2    804 _MMSR	=	0x00f2
+                    00EB    805 G$MMWR1$0$0 == 0x00eb
+                    00EB    806 _MMWR1	=	0x00eb
+                    00EC    807 G$MMWR2$0$0 == 0x00ec
+                    00EC    808 _MMWR2	=	0x00ec
+                    00B3    809 G$MODPISEL$0$0 == 0x00b3
+                    00B3    810 _MODPISEL	=	0x00b3
+                    00B7    811 G$MODPISEL1$0$0 == 0x00b7
+                    00B7    812 _MODPISEL1	=	0x00b7
+                    00BA    813 G$MODPISEL2$0$0 == 0x00ba
+                    00BA    814 _MODPISEL2	=	0x00ba
+                    00BD    815 G$MODSUSP$0$0 == 0x00bd
+                    00BD    816 _MODSUSP	=	0x00bd
+                    00BB    817 G$NMICON$0$0 == 0x00bb
+                    00BB    818 _NMICON	=	0x00bb
+                    00BC    819 G$NMISR$0$0 == 0x00bc
+                    00BC    820 _NMISR	=	0x00bc
+                    00B6    821 G$OSC_CON$0$0 == 0x00b6
+                    00B6    822 _OSC_CON	=	0x00b6
+                    0080    823 G$P0_ALTSEL0$0$0 == 0x0080
+                    0080    824 _P0_ALTSEL0	=	0x0080
+                    0086    825 G$P0_ALTSEL1$0$0 == 0x0086
+                    0086    826 _P0_ALTSEL1	=	0x0086
+                    0080    827 G$P0_DATA$0$0 == 0x0080
+                    0080    828 _P0_DATA	=	0x0080
+                    0086    829 G$P0_DIR$0$0 == 0x0086
+                    0086    830 _P0_DIR	=	0x0086
+                    0080    831 G$P0_OD$0$0 == 0x0080
+                    0080    832 _P0_OD	=	0x0080
+                    0086    833 G$P0_PUDEN$0$0 == 0x0086
+                    0086    834 _P0_PUDEN	=	0x0086
+                    0080    835 G$P0_PUDSEL$0$0 == 0x0080
+                    0080    836 _P0_PUDSEL	=	0x0080
+                    0090    837 G$P1_ALTSEL0$0$0 == 0x0090
+                    0090    838 _P1_ALTSEL0	=	0x0090
+                    0091    839 G$P1_ALTSEL1$0$0 == 0x0091
+                    0091    840 _P1_ALTSEL1	=	0x0091
+                    0090    841 G$P1_DATA$0$0 == 0x0090
+                    0090    842 _P1_DATA	=	0x0090
+                    0091    843 G$P1_DIR$0$0 == 0x0091
+                    0091    844 _P1_DIR	=	0x0091
+                    0090    845 G$P1_OD$0$0 == 0x0090
+                    0090    846 _P1_OD	=	0x0090
+                    0091    847 G$P1_PUDEN$0$0 == 0x0091
+                    0091    848 _P1_PUDEN	=	0x0091
+                    0090    849 G$P1_PUDSEL$0$0 == 0x0090
+                    0090    850 _P1_PUDSEL	=	0x0090
+                    00A0    851 G$P2_DATA$0$0 == 0x00a0
+                    00A0    852 _P2_DATA	=	0x00a0
+                    00A1    853 G$P2_DIR$0$0 == 0x00a1
+                    00A1    854 _P2_DIR	=	0x00a1
+                    00A1    855 G$P2_PUDEN$0$0 == 0x00a1
+                    00A1    856 _P2_PUDEN	=	0x00a1
+                    00A0    857 G$P2_PUDSEL$0$0 == 0x00a0
+                    00A0    858 _P2_PUDSEL	=	0x00a0
+                    00B0    859 G$P3_ALTSEL0$0$0 == 0x00b0
+                    00B0    860 _P3_ALTSEL0	=	0x00b0
+                    00B1    861 G$P3_ALTSEL1$0$0 == 0x00b1
+                    00B1    862 _P3_ALTSEL1	=	0x00b1
+                    00B0    863 G$P3_DATA$0$0 == 0x00b0
+                    00B0    864 _P3_DATA	=	0x00b0
+                    00B1    865 G$P3_DIR$0$0 == 0x00b1
+                    00B1    866 _P3_DIR	=	0x00b1
+                    00B0    867 G$P3_OD$0$0 == 0x00b0
+                    00B0    868 _P3_OD	=	0x00b0
+                    00B1    869 G$P3_PUDEN$0$0 == 0x00b1
+                    00B1    870 _P3_PUDEN	=	0x00b1
+                    00B0    871 G$P3_PUDSEL$0$0 == 0x00b0
+                    00B0    872 _P3_PUDSEL	=	0x00b0
+                    00C8    873 G$P4_ALTSEL0$0$0 == 0x00c8
+                    00C8    874 _P4_ALTSEL0	=	0x00c8
+                    00C9    875 G$P4_ALTSEL1$0$0 == 0x00c9
+                    00C9    876 _P4_ALTSEL1	=	0x00c9
+                    00C8    877 G$P4_DATA$0$0 == 0x00c8
+                    00C8    878 _P4_DATA	=	0x00c8
+                    00C9    879 G$P4_DIR$0$0 == 0x00c9
+                    00C9    880 _P4_DIR	=	0x00c9
+                    00C8    881 G$P4_OD$0$0 == 0x00c8
+                    00C8    882 _P4_OD	=	0x00c8
+                    00C9    883 G$P4_PUDEN$0$0 == 0x00c9
+                    00C9    884 _P4_PUDEN	=	0x00c9
+                    00C8    885 G$P4_PUDSEL$0$0 == 0x00c8
+                    00C8    886 _P4_PUDSEL	=	0x00c8
+                    0092    887 G$P5_ALTSEL0$0$0 == 0x0092
+                    0092    888 _P5_ALTSEL0	=	0x0092
+                    0093    889 G$P5_ALTSEL1$0$0 == 0x0093
+                    0093    890 _P5_ALTSEL1	=	0x0093
+                    0092    891 G$P5_DATA$0$0 == 0x0092
+                    0092    892 _P5_DATA	=	0x0092
+                    0093    893 G$P5_DIR$0$0 == 0x0093
+                    0093    894 _P5_DIR	=	0x0093
+                    0092    895 G$P5_OD$0$0 == 0x0092
+                    0092    896 _P5_OD	=	0x0092
+                    0093    897 G$P5_PUDEN$0$0 == 0x0093
+                    0093    898 _P5_PUDEN	=	0x0093
+                    0092    899 G$P5_PUDSEL$0$0 == 0x0092
+                    0092    900 _P5_PUDSEL	=	0x0092
+                    00BB    901 G$PASSWD$0$0 == 0x00bb
+                    00BB    902 _PASSWD	=	0x00bb
+                    0087    903 G$PCON$0$0 == 0x0087
+                    0087    904 _PCON	=	0x0087
+                    00B7    905 G$PLL_CON$0$0 == 0x00b7
+                    00B7    906 _PLL_CON	=	0x00b7
+                    00B4    907 G$PMCON0$0$0 == 0x00b4
+                    00B4    908 _PMCON0	=	0x00b4
+                    00B5    909 G$PMCON1$0$0 == 0x00b5
+                    00B5    910 _PMCON1	=	0x00b5
+                    00BB    911 G$PMCON2$0$0 == 0x00bb
+                    00BB    912 _PMCON2	=	0x00bb
+                    00B2    913 G$PORT_PAGE$0$0 == 0x00b2
+                    00B2    914 _PORT_PAGE	=	0x00b2
+                    00D0    915 G$PSW$0$0 == 0x00d0
+                    00D0    916 _PSW	=	0x00d0
+                    0099    917 G$SBUF$0$0 == 0x0099
+                    0099    918 _SBUF	=	0x0099
+                    0098    919 G$SCON$0$0 == 0x0098
+                    0098    920 _SCON	=	0x0098
+                    00BF    921 G$SCU_PAGE$0$0 == 0x00bf
+                    00BF    922 _SCU_PAGE	=	0x00bf
+                    0081    923 G$SP$0$0 == 0x0081
+                    0081    924 _SP	=	0x0081
+                    00AF    925 G$SSC_BRH$0$0 == 0x00af
+                    00AF    926 _SSC_BRH	=	0x00af
+                    00AE    927 G$SSC_BRL$0$0 == 0x00ae
+                    00AE    928 _SSC_BRL	=	0x00ae
+                    00AB    929 G$SSC_CONH_O$0$0 == 0x00ab
+                    00AB    930 _SSC_CONH_O	=	0x00ab
+                    00AB    931 G$SSC_CONH_P$0$0 == 0x00ab
+                    00AB    932 _SSC_CONH_P	=	0x00ab
+                    00AA    933 G$SSC_CONL_O$0$0 == 0x00aa
+                    00AA    934 _SSC_CONL_O	=	0x00aa
+                    00AA    935 G$SSC_CONL_P$0$0 == 0x00aa
+                    00AA    936 _SSC_CONL_P	=	0x00aa
+                    00A9    937 G$SSC_PISEL$0$0 == 0x00a9
+                    00A9    938 _SSC_PISEL	=	0x00a9
+                    00AD    939 G$SSC_RBL$0$0 == 0x00ad
+                    00AD    940 _SSC_RBL	=	0x00ad
+                    00AC    941 G$SSC_TBL$0$0 == 0x00ac
+                    00AC    942 _SSC_TBL	=	0x00ac
+                    008F    943 G$SYSCON0$0$0 == 0x008f
+                    008F    944 _SYSCON0	=	0x008f
+                    00C3    945 G$T21_RC2H$0$0 == 0x00c3
+                    00C3    946 _T21_RC2H	=	0x00c3
+                    00C2    947 G$T21_RC2L$0$0 == 0x00c2
+                    00C2    948 _T21_RC2L	=	0x00c2
+                    00C0    949 G$T21_T2CON$0$0 == 0x00c0
+                    00C0    950 _T21_T2CON	=	0x00c0
+                    00C5    951 G$T21_T2H$0$0 == 0x00c5
+                    00C5    952 _T21_T2H	=	0x00c5
+                    00C4    953 G$T21_T2L$0$0 == 0x00c4
+                    00C4    954 _T21_T2L	=	0x00c4
+                    00C1    955 G$T21_T2MOD$0$0 == 0x00c1
+                    00C1    956 _T21_T2MOD	=	0x00c1
+                    00C3    957 G$T2_RC2H$0$0 == 0x00c3
+                    00C3    958 _T2_RC2H	=	0x00c3
+                    00C2    959 G$T2_RC2L$0$0 == 0x00c2
+                    00C2    960 _T2_RC2L	=	0x00c2
+                    00C0    961 G$T2_T2CON$0$0 == 0x00c0
+                    00C0    962 _T2_T2CON	=	0x00c0
+                    00C5    963 G$T2_T2H$0$0 == 0x00c5
+                    00C5    964 _T2_T2H	=	0x00c5
+                    00C4    965 G$T2_T2L$0$0 == 0x00c4
+                    00C4    966 _T2_T2L	=	0x00c4
+                    00C1    967 G$T2_T2MOD$0$0 == 0x00c1
+                    00C1    968 _T2_T2MOD	=	0x00c1
+                    0088    969 G$TCON$0$0 == 0x0088
+                    0088    970 _TCON	=	0x0088
+                    008C    971 G$TH0$0$0 == 0x008c
+                    008C    972 _TH0	=	0x008c
+                    008D    973 G$TH1$0$0 == 0x008d
+                    008D    974 _TH1	=	0x008d
+                    008A    975 G$TL0$0$0 == 0x008a
+                    008A    976 _TL0	=	0x008a
+                    008B    977 G$TL1$0$0 == 0x008b
+                    008B    978 _TL1	=	0x008b
+                    0089    979 G$TMOD$0$0 == 0x0089
+                    0089    980 _TMOD	=	0x0089
+                    00CA    981 G$UART1_BCON$0$0 == 0x00ca
+                    00CA    982 _UART1_BCON	=	0x00ca
+                    00CB    983 G$UART1_BG$0$0 == 0x00cb
+                    00CB    984 _UART1_BG	=	0x00cb
+                    00CC    985 G$UART1_FDCON$0$0 == 0x00cc
+                    00CC    986 _UART1_FDCON	=	0x00cc
+                    00CE    987 G$UART1_FDRES$0$0 == 0x00ce
+                    00CE    988 _UART1_FDRES	=	0x00ce
+                    00CD    989 G$UART1_FDSTEP$0$0 == 0x00cd
+                    00CD    990 _UART1_FDSTEP	=	0x00cd
+                    00C9    991 G$UART1_SBUF$0$0 == 0x00c9
+                    00C9    992 _UART1_SBUF	=	0x00c9
+                    00C8    993 G$UART1_SCON$0$0 == 0x00c8
+                    00C8    994 _UART1_SCON	=	0x00c8
+                    00BB    995 G$WDTCON$0$0 == 0x00bb
+                    00BB    996 _WDTCON	=	0x00bb
+                    00BF    997 G$WDTH$0$0 == 0x00bf
+                    00BF    998 _WDTH	=	0x00bf
+                    00BE    999 G$WDTL$0$0 == 0x00be
+                    00BE   1000 _WDTL	=	0x00be
+                    00BC   1001 G$WDTREL$0$0 == 0x00bc
+                    00BC   1002 _WDTREL	=	0x00bc
+                    00BD   1003 G$WDTWINB$0$0 == 0x00bd
+                    00BD   1004 _WDTWINB	=	0x00bd
+                    00B3   1005 G$XADDRH$0$0 == 0x00b3
+                    00B3   1006 _XADDRH	=	0x00b3
+                    CBCA   1007 G$ADC_RESR0LH$0$0 == 0xcbca
+                    CBCA   1008 _ADC_RESR0LH	=	0xcbca
+                    CDCC   1009 G$ADC_RESR1LH$0$0 == 0xcdcc
+                    CDCC   1010 _ADC_RESR1LH	=	0xcdcc
+                    CFCE   1011 G$ADC_RESR2LH$0$0 == 0xcfce
+                    CFCE   1012 _ADC_RESR2LH	=	0xcfce
+                    D3D2   1013 G$ADC_RESR3LH$0$0 == 0xd3d2
+                    D3D2   1014 _ADC_RESR3LH	=	0xd3d2
+                    CBCA   1015 G$ADC_RESRA0LH$0$0 == 0xcbca
+                    CBCA   1016 _ADC_RESRA0LH	=	0xcbca
+                    CDCC   1017 G$ADC_RESRA1LH$0$0 == 0xcdcc
+                    CDCC   1018 _ADC_RESRA1LH	=	0xcdcc
+                    CFCE   1019 G$ADC_RESRA2LH$0$0 == 0xcfce
+                    CFCE   1020 _ADC_RESRA2LH	=	0xcfce
+                    D3D2   1021 G$ADC_RESRA3LH$0$0 == 0xd3d2
+                    D3D2   1022 _ADC_RESRA3LH	=	0xd3d2
+                    FBFA   1023 G$CCU6_CC60RLH$0$0 == 0xfbfa
+                    FBFA   1024 _CCU6_CC60RLH	=	0xfbfa
+                    FBFA   1025 G$CCU6_CC60SRLH$0$0 == 0xfbfa
+                    FBFA   1026 _CCU6_CC60SRLH	=	0xfbfa
+                    FDFC   1027 G$CCU6_CC61RLH$0$0 == 0xfdfc
+                    FDFC   1028 _CCU6_CC61RLH	=	0xfdfc
+                    FDFC   1029 G$CCU6_CC61SRLH$0$0 == 0xfdfc
+                    FDFC   1030 _CCU6_CC61SRLH	=	0xfdfc
+                    FFFE   1031 G$CCU6_CC62RLH$0$0 == 0xfffe
+                    FFFE   1032 _CCU6_CC62RLH	=	0xfffe
+                    FFFE   1033 G$CCU6_CC62SRLH$0$0 == 0xfffe
+                    FFFE   1034 _CCU6_CC62SRLH	=	0xfffe
+                    9B9A   1035 G$CCU6_CC63RLH$0$0 == 0x9b9a
+                    9B9A   1036 _CCU6_CC63RLH	=	0x9b9a
+                    9B9A   1037 G$CCU6_CC63SRLH$0$0 == 0x9b9a
+                    9B9A   1038 _CCU6_CC63SRLH	=	0x9b9a
+                    FBFA   1039 G$CCU6_T12LH$0$0 == 0xfbfa
+                    FBFA   1040 _CCU6_T12LH	=	0xfbfa
+                    9D9C   1041 G$CCU6_T12PRLH$0$0 == 0x9d9c
+                    9D9C   1042 _CCU6_T12PRLH	=	0x9d9c
+                    FDFC   1043 G$CCU6_T13LH$0$0 == 0xfdfc
+                    FDFC   1044 _CCU6_T13LH	=	0xfdfc
+                    9F9E   1045 G$CCU6_T13PRLH$0$0 == 0x9f9e
+                    9F9E   1046 _CCU6_T13PRLH	=	0x9f9e
+                    C3C2   1047 G$T2_RC2LH$0$0 == 0xc3c2
+                    C3C2   1048 _T2_RC2LH	=	0xc3c2
+                    C5C4   1049 G$T2_T2LH$0$0 == 0xc5c4
+                    C5C4   1050 _T2_T2LH	=	0xc5c4
+                           1051 ;--------------------------------------------------------
+                           1052 ; special function bits
+                           1053 ;--------------------------------------------------------
+                           1054 	.area RSEG    (DATA)
+                    00A0   1055 G$CD_BSY$0$0 == 0x00a0
+                    00A0   1056 _CD_BSY	=	0x00a0
+                    00A4   1057 G$DMAP$0$0 == 0x00a4
+                    00A4   1058 _DMAP	=	0x00a4
+                    00A2   1059 G$EOC$0$0 == 0x00a2
+                    00A2   1060 _EOC	=	0x00a2
+                    00A1   1061 G$ERROR$0$0 == 0x00a1
+                    00A1   1062 _ERROR	=	0x00a1
+                    00A3   1063 G$INT_EN$0$0 == 0x00a3
+                    00A3   1064 _INT_EN	=	0x00a3
+                    00A5   1065 G$KEEPX$0$0 == 0x00a5
+                    00A5   1066 _KEEPX	=	0x00a5
+                    00A6   1067 G$KEEPY$0$0 == 0x00a6
+                    00A6   1068 _KEEPY	=	0x00a6
+                    00A7   1069 G$KEEPZ$0$0 == 0x00a7
+                    00A7   1070 _KEEPZ	=	0x00a7
+                    00AF   1071 G$EA$0$0 == 0x00af
+                    00AF   1072 _EA	=	0x00af
+                    00AC   1073 G$ES$0$0 == 0x00ac
+                    00AC   1074 _ES	=	0x00ac
+                    00A9   1075 G$ET0$0$0 == 0x00a9
+                    00A9   1076 _ET0	=	0x00a9
+                    00AB   1077 G$ET1$0$0 == 0x00ab
+                    00AB   1078 _ET1	=	0x00ab
+                    00AD   1079 G$ET2$0$0 == 0x00ad
+                    00AD   1080 _ET2	=	0x00ad
+                    00A8   1081 G$EX0$0$0 == 0x00a8
+                    00A8   1082 _EX0	=	0x00a8
+                    00AA   1083 G$EX1$0$0 == 0x00aa
+                    00AA   1084 _EX1	=	0x00aa
+                    00E8   1085 G$EADC$0$0 == 0x00e8
+                    00E8   1086 _EADC	=	0x00e8
+                    00EC   1087 G$ECCIP0$0$0 == 0x00ec
+                    00EC   1088 _ECCIP0	=	0x00ec
+                    00ED   1089 G$ECCIP1$0$0 == 0x00ed
+                    00ED   1090 _ECCIP1	=	0x00ed
+                    00EE   1091 G$ECCIP2$0$0 == 0x00ee
+                    00EE   1092 _ECCIP2	=	0x00ee
+                    00EF   1093 G$ECCIP3$0$0 == 0x00ef
+                    00EF   1094 _ECCIP3	=	0x00ef
+                    00E9   1095 G$ESSC$0$0 == 0x00e9
+                    00E9   1096 _ESSC	=	0x00e9
+                    00EA   1097 G$EX2$0$0 == 0x00ea
+                    00EA   1098 _EX2	=	0x00ea
+                    00EB   1099 G$EXM$0$0 == 0x00eb
+                    00EB   1100 _EXM	=	0x00eb
+                    00F8   1101 G$PADC$0$0 == 0x00f8
+                    00F8   1102 _PADC	=	0x00f8
+                    00FC   1103 G$PCCIP0$0$0 == 0x00fc
+                    00FC   1104 _PCCIP0	=	0x00fc
+                    00FD   1105 G$PCCIP1$0$0 == 0x00fd
+                    00FD   1106 _PCCIP1	=	0x00fd
+                    00FE   1107 G$PCCIP2$0$0 == 0x00fe
+                    00FE   1108 _PCCIP2	=	0x00fe
+                    00FF   1109 G$PCCIP3$0$0 == 0x00ff
+                    00FF   1110 _PCCIP3	=	0x00ff
+                    00F9   1111 G$PSSC$0$0 == 0x00f9
+                    00F9   1112 _PSSC	=	0x00f9
+                    00FA   1113 G$PX2$0$0 == 0x00fa
+                    00FA   1114 _PX2	=	0x00fa
+                    00FB   1115 G$PXM$0$0 == 0x00fb
+                    00FB   1116 _PXM	=	0x00fb
+                    00BC   1117 G$PS$0$0 == 0x00bc
+                    00BC   1118 _PS	=	0x00bc
+                    00B9   1119 G$PT0$0$0 == 0x00b9
+                    00B9   1120 _PT0	=	0x00b9
+                    00BB   1121 G$PT1$0$0 == 0x00bb
+                    00BB   1122 _PT1	=	0x00bb
+                    00BD   1123 G$PT2$0$0 == 0x00bd
+                    00BD   1124 _PT2	=	0x00bd
+                    00B8   1125 G$PX0$0$0 == 0x00b8
+                    00B8   1126 _PX0	=	0x00b8
+                    00BA   1127 G$PX1$0$0 == 0x00ba
+                    00BA   1128 _PX1	=	0x00ba
+                    00B1   1129 G$IERR$0$0 == 0x00b1
+                    00B1   1130 _IERR	=	0x00b1
+                    00B0   1131 G$IRDY$0$0 == 0x00b0
+                    00B0   1132 _IRDY	=	0x00b0
+                    00B2   1133 G$MDU_BSY$0$0 == 0x00b2
+                    00B2   1134 _MDU_BSY	=	0x00b2
+                    00D6   1135 G$AC$0$0 == 0x00d6
+                    00D6   1136 _AC	=	0x00d6
+                    00D7   1137 G$CY$0$0 == 0x00d7
+                    00D7   1138 _CY	=	0x00d7
+                    00D5   1139 G$F0$0$0 == 0x00d5
+                    00D5   1140 _F0	=	0x00d5
+                    00D1   1141 G$F1$0$0 == 0x00d1
+                    00D1   1142 _F1	=	0x00d1
+                    00D2   1143 G$OV$0$0 == 0x00d2
+                    00D2   1144 _OV	=	0x00d2
+                    00D0   1145 G$P$0$0 == 0x00d0
+                    00D0   1146 _P	=	0x00d0
+                    00D3   1147 G$RS0$0$0 == 0x00d3
+                    00D3   1148 _RS0	=	0x00d3
+                    00D4   1149 G$RS1$0$0 == 0x00d4
+                    00D4   1150 _RS1	=	0x00d4
+                    009A   1151 G$RB8$0$0 == 0x009a
+                    009A   1152 _RB8	=	0x009a
+                    009C   1153 G$REN$0$0 == 0x009c
+                    009C   1154 _REN	=	0x009c
+                    0098   1155 G$RI$0$0 == 0x0098
+                    0098   1156 _RI	=	0x0098
+                    009F   1157 G$SM0$0$0 == 0x009f
+                    009F   1158 _SM0	=	0x009f
+                    009E   1159 G$SM1$0$0 == 0x009e
+                    009E   1160 _SM1	=	0x009e
+                    009D   1161 G$SM2$0$0 == 0x009d
+                    009D   1162 _SM2	=	0x009d
+                    009B   1163 G$TB8$0$0 == 0x009b
+                    009B   1164 _TB8	=	0x009b
+                    0099   1165 G$TI$0$0 == 0x0099
+                    0099   1166 _TI	=	0x0099
+                    00C1   1167 G$C_T2$0$0 == 0x00c1
+                    00C1   1168 _C_T2	=	0x00c1
+                    00C0   1169 G$CP_RL2$0$0 == 0x00c0
+                    00C0   1170 _CP_RL2	=	0x00c0
+                    00C3   1171 G$EXEN2$0$0 == 0x00c3
+                    00C3   1172 _EXEN2	=	0x00c3
+                    00C6   1173 G$EXF2$0$0 == 0x00c6
+                    00C6   1174 _EXF2	=	0x00c6
+                    00C7   1175 G$TF2$0$0 == 0x00c7
+                    00C7   1176 _TF2	=	0x00c7
+                    00C2   1177 G$TR2$0$0 == 0x00c2
+                    00C2   1178 _TR2	=	0x00c2
+                    0089   1179 G$IE0$0$0 == 0x0089
+                    0089   1180 _IE0	=	0x0089
+                    008B   1181 G$IE1$0$0 == 0x008b
+                    008B   1182 _IE1	=	0x008b
+                    0088   1183 G$IT0$0$0 == 0x0088
+                    0088   1184 _IT0	=	0x0088
+                    008A   1185 G$IT1$0$0 == 0x008a
+                    008A   1186 _IT1	=	0x008a
+                    008D   1187 G$TF0$0$0 == 0x008d
+                    008D   1188 _TF0	=	0x008d
+                    008F   1189 G$TF1$0$0 == 0x008f
+                    008F   1190 _TF1	=	0x008f
+                    008C   1191 G$TR0$0$0 == 0x008c
+                    008C   1192 _TR0	=	0x008c
+                    008E   1193 G$TR1$0$0 == 0x008e
+                    008E   1194 _TR1	=	0x008e
+                    00CA   1195 G$RB8_1$0$0 == 0x00ca
+                    00CA   1196 _RB8_1	=	0x00ca
+                    00CC   1197 G$REN_1$0$0 == 0x00cc
+                    00CC   1198 _REN_1	=	0x00cc
+                    00C8   1199 G$RI_1$0$0 == 0x00c8
+                    00C8   1200 _RI_1	=	0x00c8
+                    00CF   1201 G$SM0_1$0$0 == 0x00cf
+                    00CF   1202 _SM0_1	=	0x00cf
+                    00CE   1203 G$SM1_1$0$0 == 0x00ce
+                    00CE   1204 _SM1_1	=	0x00ce
+                    00CD   1205 G$SM2_1$0$0 == 0x00cd
+                    00CD   1206 _SM2_1	=	0x00cd
+                    00CB   1207 G$TB8_1$0$0 == 0x00cb
+                    00CB   1208 _TB8_1	=	0x00cb
+                    00C9   1209 G$TI_1$0$0 == 0x00c9
+                    00C9   1210 _TI_1	=	0x00c9
+                    0080   1211 G$P0_0$0$0 == 0x0080
+                    0080   1212 _P0_0	=	0x0080
+                    0081   1213 G$P0_1$0$0 == 0x0081
+                    0081   1214 _P0_1	=	0x0081
+                    0082   1215 G$P0_2$0$0 == 0x0082
+                    0082   1216 _P0_2	=	0x0082
+                    0083   1217 G$P0_3$0$0 == 0x0083
+                    0083   1218 _P0_3	=	0x0083
+                    0084   1219 G$P0_4$0$0 == 0x0084
+                    0084   1220 _P0_4	=	0x0084
+                    0085   1221 G$P0_5$0$0 == 0x0085
+                    0085   1222 _P0_5	=	0x0085
+                    0086   1223 G$P0_6$0$0 == 0x0086
+                    0086   1224 _P0_6	=	0x0086
+                    0087   1225 G$P0_7$0$0 == 0x0087
+                    0087   1226 _P0_7	=	0x0087
+                    0090   1227 G$P1_0$0$0 == 0x0090
+                    0090   1228 _P1_0	=	0x0090
+                    0091   1229 G$P1_1$0$0 == 0x0091
+                    0091   1230 _P1_1	=	0x0091
+                    0092   1231 G$P1_2$0$0 == 0x0092
+                    0092   1232 _P1_2	=	0x0092
+                    0093   1233 G$P1_3$0$0 == 0x0093
+                    0093   1234 _P1_3	=	0x0093
+                    0094   1235 G$P1_4$0$0 == 0x0094
+                    0094   1236 _P1_4	=	0x0094
+                    0095   1237 G$P1_5$0$0 == 0x0095
+                    0095   1238 _P1_5	=	0x0095
+                    0096   1239 G$P1_6$0$0 == 0x0096
+                    0096   1240 _P1_6	=	0x0096
+                    0097   1241 G$P1_7$0$0 == 0x0097
+                    0097   1242 _P1_7	=	0x0097
+                    00A0   1243 G$P2_0$0$0 == 0x00a0
+                    00A0   1244 _P2_0	=	0x00a0
+                    00A1   1245 G$P2_1$0$0 == 0x00a1
+                    00A1   1246 _P2_1	=	0x00a1
+                    00A2   1247 G$P2_2$0$0 == 0x00a2
+                    00A2   1248 _P2_2	=	0x00a2
+                    00A3   1249 G$P2_3$0$0 == 0x00a3
+                    00A3   1250 _P2_3	=	0x00a3
+                    00A4   1251 G$P2_4$0$0 == 0x00a4
+                    00A4   1252 _P2_4	=	0x00a4
+                    00A5   1253 G$P2_5$0$0 == 0x00a5
+                    00A5   1254 _P2_5	=	0x00a5
+                    00A6   1255 G$P2_6$0$0 == 0x00a6
+                    00A6   1256 _P2_6	=	0x00a6
+                    00A7   1257 G$P2_7$0$0 == 0x00a7
+                    00A7   1258 _P2_7	=	0x00a7
+                    00B0   1259 G$P3_0$0$0 == 0x00b0
+                    00B0   1260 _P3_0	=	0x00b0
+                    00B1   1261 G$P3_1$0$0 == 0x00b1
+                    00B1   1262 _P3_1	=	0x00b1
+                    00B2   1263 G$P3_2$0$0 == 0x00b2
+                    00B2   1264 _P3_2	=	0x00b2
+                    00B3   1265 G$P3_3$0$0 == 0x00b3
+                    00B3   1266 _P3_3	=	0x00b3
+                    00B4   1267 G$P3_4$0$0 == 0x00b4
+                    00B4   1268 _P3_4	=	0x00b4
+                    00B5   1269 G$P3_5$0$0 == 0x00b5
+                    00B5   1270 _P3_5	=	0x00b5
+                    00B6   1271 G$P3_6$0$0 == 0x00b6
+                    00B6   1272 _P3_6	=	0x00b6
+                    00B7   1273 G$P3_7$0$0 == 0x00b7
+                    00B7   1274 _P3_7	=	0x00b7
+                    00C8   1275 G$P4_0$0$0 == 0x00c8
+                    00C8   1276 _P4_0	=	0x00c8
+                    00C9   1277 G$P4_1$0$0 == 0x00c9
+                    00C9   1278 _P4_1	=	0x00c9
+                    00CA   1279 G$P4_2$0$0 == 0x00ca
+                    00CA   1280 _P4_2	=	0x00ca
+                    00CB   1281 G$P4_3$0$0 == 0x00cb
+                    00CB   1282 _P4_3	=	0x00cb
+                    00CC   1283 G$P4_4$0$0 == 0x00cc
+                    00CC   1284 _P4_4	=	0x00cc
+                    00CD   1285 G$P4_5$0$0 == 0x00cd
+                    00CD   1286 _P4_5	=	0x00cd
+                    00CE   1287 G$P4_6$0$0 == 0x00ce
+                    00CE   1288 _P4_6	=	0x00ce
+                    00CF   1289 G$P4_7$0$0 == 0x00cf
+                    00CF   1290 _P4_7	=	0x00cf
+                           1291 ;--------------------------------------------------------
+                           1292 ; overlayable register banks
+                           1293 ;--------------------------------------------------------
+                           1294 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                    1295 	.ds 8
+                           1296 ;--------------------------------------------------------
+                           1297 ; internal ram data
+                           1298 ;--------------------------------------------------------
+                           1299 	.area DSEG    (DATA)
+                    0000   1300 LCAN_vWriteAMData$ulData$1$1==.
+   0008                    1301 _CAN_vWriteAMData_ulData_1_1:
+   0008                    1302 	.ds 4
+                    0004   1303 LCAN_vGetMsgObj$pstObj$1$1==.
+   000C                    1304 _CAN_vGetMsgObj_PARM_2:
+   000C                    1305 	.ds 3
+                    0007   1306 LCAN_vGetMsgObj$ubTemp$1$1==.
+   000F                    1307 _CAN_vGetMsgObj_ubTemp_1_1:
+   000F                    1308 	.ds 1
+                    0008   1309 LCAN_vGetMsgObj$sloc0$1$0==.
+   0010                    1310 _CAN_vGetMsgObj_sloc0_1_0:
+   0010                    1311 	.ds 3
+                    000B   1312 LCAN_vGetMsgObj$sloc1$1$0==.
+   0013                    1313 _CAN_vGetMsgObj_sloc1_1_0:
+   0013                    1314 	.ds 1
+                    000C   1315 LCAN_vGetMsgObj$sloc2$1$0==.
+   0014                    1316 _CAN_vGetMsgObj_sloc2_1_0:
+   0014                    1317 	.ds 3
+                    000F   1318 LCAN_vLoadData$ulpubData$1$1==.
+   0017                    1319 _CAN_vLoadData_PARM_2:
+   0017                    1320 	.ds 3
+                    0012   1321 LCAN_vLoadData$sloc0$1$0==.
+   001A                    1322 _CAN_vLoadData_sloc0_1_0:
+   001A                    1323 	.ds 3
+                           1324 ;--------------------------------------------------------
+                           1325 ; overlayable items in internal ram 
+                           1326 ;--------------------------------------------------------
+                           1327 	.area OSEG    (OVR,DATA)
+                           1328 ;--------------------------------------------------------
+                           1329 ; indirectly addressable internal ram data
+                           1330 ;--------------------------------------------------------
+                           1331 	.area ISEG    (DATA)
+                           1332 ;--------------------------------------------------------
+                           1333 ; absolute internal ram data
+                           1334 ;--------------------------------------------------------
+                           1335 	.area IABS    (ABS,DATA)
+                           1336 	.area IABS    (ABS,DATA)
+                           1337 ;--------------------------------------------------------
+                           1338 ; bit data
+                           1339 ;--------------------------------------------------------
+                           1340 	.area BSEG    (BIT)
+                           1341 ;--------------------------------------------------------
+                           1342 ; paged external ram data
+                           1343 ;--------------------------------------------------------
+                           1344 	.area PSEG    (PAG,XDATA)
+                           1345 ;--------------------------------------------------------
+                           1346 ; external ram data
+                           1347 ;--------------------------------------------------------
+                           1348 	.area XSEG    (XDATA)
+                           1349 ;--------------------------------------------------------
+                           1350 ; absolute external ram data
+                           1351 ;--------------------------------------------------------
+                           1352 	.area XABS    (ABS,XDATA)
+                           1353 ;--------------------------------------------------------
+                           1354 ; external initialized ram data
+                           1355 ;--------------------------------------------------------
+                           1356 	.area XISEG   (XDATA)
+                           1357 	.area HOME    (CODE)
+                           1358 	.area GSINIT0 (CODE)
+                           1359 	.area GSINIT1 (CODE)
+                           1360 	.area GSINIT2 (CODE)
+                           1361 	.area GSINIT3 (CODE)
+                           1362 	.area GSINIT4 (CODE)
+                           1363 	.area GSINIT5 (CODE)
+                           1364 	.area GSINIT  (CODE)
+                           1365 	.area GSFINAL (CODE)
+                           1366 	.area CSEG    (CODE)
+                           1367 ;--------------------------------------------------------
+                           1368 ; global & static initialisations
+                           1369 ;--------------------------------------------------------
+                           1370 	.area HOME    (CODE)
+                           1371 	.area GSINIT  (CODE)
+                           1372 	.area GSFINAL (CODE)
+                           1373 	.area GSINIT  (CODE)
+                           1374 ;--------------------------------------------------------
+                           1375 ; Home
+                           1376 ;--------------------------------------------------------
+                           1377 	.area HOME    (CODE)
+                           1378 	.area HOME    (CODE)
+                           1379 ;--------------------------------------------------------
+                           1380 ; code
+                           1381 ;--------------------------------------------------------
+                           1382 	.area CSEG    (CODE)
+                           1383 ;------------------------------------------------------------
+                           1384 ;Allocation info for local variables in function 'CAN_vInit'
+                           1385 ;------------------------------------------------------------
+                           1386 ;------------------------------------------------------------
+                    0000   1387 	G$CAN_vInit$0$0 ==.
+                    0000   1388 	C$CAN.C$124$0$0 ==.
+                           1389 ;	../CAN.C:124: void CAN_vInit(void)
+                           1390 ;	-----------------------------------------
+                           1391 ;	 function CAN_vInit
+                           1392 ;	-----------------------------------------
+   00C0                    1393 _CAN_vInit:
+                    0002   1394 	ar2 = 0x02
+                    0003   1395 	ar3 = 0x03
+                    0004   1396 	ar4 = 0x04
+                    0005   1397 	ar5 = 0x05
+                    0006   1398 	ar6 = 0x06
+                    0007   1399 	ar7 = 0x07
+                    0000   1400 	ar0 = 0x00
+                    0001   1401 	ar1 = 0x01
+                    0000   1402 	C$CAN.C$140$1$1 ==.
+                           1403 ;	../CAN.C:140: CAN_vWriteCANAddress(CAN_PANCTR); // Addressing CAN_PANCTR
+   00C0 75 D9 71           1404 	mov	_CAN_ADL,#0x71
+   00C3 75 DA 00           1405 	mov	_CAN_ADH,#0x00
+                    0006   1406 	C$CAN.C$141$1$1 ==.
+                           1407 ;	../CAN.C:141: CAN_DATA1 = CAN_PANCTR_BUSY;
+   00C6 75 DC 01           1408 	mov	_CAN_DATA1,#0x01
+                    0009   1409 	C$CAN.C$142$1$1 ==.
+                           1410 ;	../CAN.C:142: while(CAN_DATA1 & CAN_PANCTR_BUSY){ // wait until Panel has finished the 
+   00C9                    1411 00101$:
+   00C9 E5 DC              1412 	mov	a,_CAN_DATA1
+   00CB 30 E0 05           1413 	jnb	acc.0,00103$
+                    000E   1414 	C$CAN.C$144$2$2 ==.
+                           1415 ;	../CAN.C:144: CAN_ADCON &= ~0x01;       
+   00CE 53 D8 FE           1416 	anl	_CAN_ADCON,#0xFE
+   00D1 80 F6              1417 	sjmp	00101$
+   00D3                    1418 00103$:
+                    0013   1419 	C$CAN.C$156$1$1 ==.
+                           1420 ;	../CAN.C:156: CAN_vWriteCANAddress(CAN_NCR0); // Addressing CAN_NCR0
+   00D3 75 D9 80           1421 	mov	_CAN_ADL,#0x80
+   00D6 75 DA 00           1422 	mov	_CAN_ADH,#0x00
+                    0019   1423 	C$CAN.C$157$1$1 ==.
+                           1424 ;	../CAN.C:157: CAN_DATA0 = 0x41;            // load NODE 0 control register[7-0]
+   00D9 75 DB 41           1425 	mov	_CAN_DATA0,#0x41
+                    001C   1426 	C$CAN.C$158$1$1 ==.
+                           1427 ;	../CAN.C:158: CAN_vWriteEN(D0_VALID+ADR_INC); // Data0 is Valid for transmission and 
+   00DC 75 D8 15           1428 	mov	_CAN_ADCON,#0x15
+   00DF                    1429 00104$:
+   00DF E5 D8              1430 	mov	a,_CAN_ADCON
+   00E1 20 E1 FB           1431 	jb	acc.1,00104$
+                    0024   1432 	C$CAN.C$173$1$1 ==.
+                           1433 ;	../CAN.C:173: CAN_vWriteCANAddress(CAN_NCR1); // Addressing CAN_NCR1
+   00E4 75 D9 C0           1434 	mov	_CAN_ADL,#0xC0
+   00E7 75 DA 00           1435 	mov	_CAN_ADH,#0x00
+                    002A   1436 	C$CAN.C$174$1$1 ==.
+                           1437 ;	../CAN.C:174: CAN_DATA0 = 0x43;            // load NODE 1 control register[7-0]
+   00EA 75 DB 43           1438 	mov	_CAN_DATA0,#0x43
+                    002D   1439 	C$CAN.C$175$1$1 ==.
+                           1440 ;	../CAN.C:175: CAN_vWriteEN(D0_VALID+ADR_INC); // Data0 is Valid for transmission and 
+   00ED 75 D8 15           1441 	mov	_CAN_ADCON,#0x15
+   00F0                    1442 00107$:
+   00F0 E5 D8              1443 	mov	a,_CAN_ADCON
+   00F2 20 E1 FB           1444 	jb	acc.1,00107$
+                    0035   1445 	C$CAN.C$180$1$1 ==.
+                           1446 ;	../CAN.C:180: CAN_ADCON = ADR_INC;         // Auto Increment the current address(+1)
+   00F5 75 D8 04           1447 	mov	_CAN_ADCON,#0x04
+                    0038   1448 	C$CAN.C$185$1$1 ==.
+                           1449 ;	../CAN.C:185: CAN_DATA0 = 0x00;            // load NIPR1_LECINP, NIPR1_ALINP
+   00F8 75 DB 00           1450 	mov	_CAN_DATA0,#0x00
+                    003B   1451 	C$CAN.C$186$1$1 ==.
+                           1452 ;	../CAN.C:186: CAN_DATA1 = 0x00;            // load NIPR1_CFCINP, NIPR1_TRINP
+   00FB 75 DC 00           1453 	mov	_CAN_DATA1,#0x00
+                    003E   1454 	C$CAN.C$187$1$1 ==.
+                           1455 ;	../CAN.C:187: CAN_vWriteEN(D0_VALID+D1_VALID+ADR_INC); // Data0 and Data1 are Valid for 
+   00FE 75 D8 35           1456 	mov	_CAN_ADCON,#0x35
+   0101                    1457 00110$:
+   0101 E5 D8              1458 	mov	a,_CAN_ADCON
+   0103 20 E1 FB           1459 	jb	acc.1,00110$
+                    0046   1460 	C$CAN.C$201$1$1 ==.
+                           1461 ;	../CAN.C:201: CAN_DATA0 = 0x03;            // Receive Select NPCR1_RXSEL
+   0106 75 DB 03           1462 	mov	_CAN_DATA0,#0x03
+                    0049   1463 	C$CAN.C$202$1$1 ==.
+                           1464 ;	../CAN.C:202: CAN_DATA1 = 0x00;            // Loop-back mode is disabled
+   0109 75 DC 00           1465 	mov	_CAN_DATA1,#0x00
+                    004C   1466 	C$CAN.C$203$1$1 ==.
+                           1467 ;	../CAN.C:203: CAN_vWriteEN(D0_VALID+D1_VALID+ADR_INC);  //  Data0 & 1 are Valid for 
+   010C 75 D8 35           1468 	mov	_CAN_ADCON,#0x35
+   010F                    1469 00113$:
+   010F E5 D8              1470 	mov	a,_CAN_ADCON
+   0111 20 E1 FB           1471 	jb	acc.1,00113$
+                    0054   1472 	C$CAN.C$221$1$1 ==.
+                           1473 ;	../CAN.C:221: CAN_DATA0 = 0x5F;            // load NBTR1_SJW, BRP
+   0114 75 DB 5F           1474 	mov	_CAN_DATA0,#0x5F
+                    0057   1475 	C$CAN.C$222$1$1 ==.
+                           1476 ;	../CAN.C:222: CAN_DATA1 = 0x18;            // load NBTR1_DIV8, TSEG2, TSEG1
+   0117 75 DC 18           1477 	mov	_CAN_DATA1,#0x18
+                    005A   1478 	C$CAN.C$223$1$1 ==.
+                           1479 ;	../CAN.C:223: CAN_vWriteEN(D0_VALID+D1_VALID+ADR_INC);  // Data0, 1 are valid for 
+   011A 75 D8 35           1480 	mov	_CAN_ADCON,#0x35
+   011D                    1481 00116$:
+   011D E5 D8              1482 	mov	a,_CAN_ADCON
+   011F 20 E1 FB           1483 	jb	acc.1,00116$
+                    0062   1484 	C$CAN.C$234$1$1 ==.
+                           1485 ;	../CAN.C:234: CAN_DATA2 = 0x60;            // load NECNT1_EWRNLVL register
+   0122 75 DD 60           1486 	mov	_CAN_DATA2,#0x60
+                    0065   1487 	C$CAN.C$235$1$1 ==.
+                           1488 ;	../CAN.C:235: CAN_vWriteEN(D2_VALID+ADR_INC); // Data2 is Valid for transmission, Auto 
+   0125 75 D8 45           1489 	mov	_CAN_ADCON,#0x45
+   0128                    1490 00119$:
+   0128 E5 D8              1491 	mov	a,_CAN_ADCON
+   012A 20 E1 FB           1492 	jb	acc.1,00119$
+                    006D   1493 	C$CAN.C$248$1$1 ==.
+                           1494 ;	../CAN.C:248: CAN_DATA0 = 0x00;            // load NFCR1_CFCL
+   012D 75 DB 00           1495 	mov	_CAN_DATA0,#0x00
+                    0070   1496 	C$CAN.C$249$1$1 ==.
+                           1497 ;	../CAN.C:249: CAN_DATA1 = 0x00;            // load NFCR1_CFCH
+   0130 75 DC 00           1498 	mov	_CAN_DATA1,#0x00
+                    0073   1499 	C$CAN.C$250$1$1 ==.
+                           1500 ;	../CAN.C:250: CAN_DATA2 = 0x00;            // load NFCR1_CFCOV, CFCIE, CFMOD, CFSEL
+   0133 75 DD 00           1501 	mov	_CAN_DATA2,#0x00
+                    0076   1502 	C$CAN.C$251$1$1 ==.
+                           1503 ;	../CAN.C:251: CAN_vWriteEN(D0_VALID+D1_VALID+D2_VALID); // Data0, 1, 2 are valid for 
+   0136 75 D8 71           1504 	mov	_CAN_ADCON,#0x71
+   0139                    1505 00122$:
+   0139 E5 D8              1506 	mov	a,_CAN_ADCON
+   013B 20 E1 FB           1507 	jb	acc.1,00122$
+                    007E   1508 	C$CAN.C$261$1$1 ==.
+                           1509 ;	../CAN.C:261: SFR_PAGE(_pp2, noSST);       // switch to page 2
+   013E 75 B2 02           1510 	mov	_PORT_PAGE,#0x02
+                    0081   1511 	C$CAN.C$262$1$1 ==.
+                           1512 ;	../CAN.C:262: P1_ALTSEL0      |= 0x08;    //  set AltSel0 
+   0141 43 90 08           1513 	orl	_P1_ALTSEL0,#0x08
+                    0084   1514 	C$CAN.C$263$1$1 ==.
+                           1515 ;	../CAN.C:263: P1_ALTSEL1      |= 0x08;    //  set AltSel1
+   0144 43 91 08           1516 	orl	_P1_ALTSEL1,#0x08
+                    0087   1517 	C$CAN.C$265$1$1 ==.
+                           1518 ;	../CAN.C:265: SFR_PAGE(_pp0, noSST);       // switch to page 0
+   0147 75 B2 00           1519 	mov	_PORT_PAGE,#0x00
+                    008A   1520 	C$CAN.C$266$1$1 ==.
+                           1521 ;	../CAN.C:266: P1_DIR          |= 0x08;        //  set Direction as Output
+   014A 43 91 08           1522 	orl	_P1_DIR,#0x08
+                    008D   1523 	C$CAN.C$273$1$1 ==.
+                           1524 ;	../CAN.C:273: CAN_vWriteCANAddress(CAN_PANCTR); // Addressing CAN_PANCTR
+   014D 75 D9 71           1525 	mov	_CAN_ADL,#0x71
+   0150 75 DA 00           1526 	mov	_CAN_ADH,#0x00
+                    0093   1527 	C$CAN.C$276$1$1 ==.
+                           1528 ;	../CAN.C:276: CAN_vSetListCommand(0x02000002);  // MO0 for list 2
+   0153 90 00 02           1529 	mov	dptr,#(0x02&0x00ff)
+   0156 E4                 1530 	clr	a
+   0157 F5 F0              1531 	mov	b,a
+   0159 74 02              1532 	mov	a,#0x02
+   015B 12 02 07           1533 	lcall	_CAN_vSetListCommand
+                    009E   1534 	C$CAN.C$290$1$1 ==.
+                           1535 ;	../CAN.C:290: CAN_vWriteCANAddress(CAN_MOCTR0); // Addressing MO0 control register
+   015E 75 D9 07           1536 	mov	_CAN_ADL,#0x07
+   0161 75 DA 04           1537 	mov	_CAN_ADH,#0x04
+                    00A4   1538 	C$CAN.C$292$1$1 ==.
+                           1539 ;	../CAN.C:292: CAN_vWriteAMData(0x0EA80000); // load MO0 control register
+   0164 90 00 00           1540 	mov	dptr,#0x0000
+   0167 75 F0 A8           1541 	mov	b,#0xA8
+   016A 74 0E              1542 	mov	a,#0x0E
+   016C 12 01 E3           1543 	lcall	_CAN_vWriteAMData
+                    00AF   1544 	C$CAN.C$295$1$1 ==.
+                           1545 ;	../CAN.C:295: CAN_ADCON = ADR_DEC;         // Auto Decrement the current address(-1)
+   016F 75 D8 08           1546 	mov	_CAN_ADCON,#0x08
+                    00B2   1547 	C$CAN.C$304$1$1 ==.
+                           1548 ;	../CAN.C:304: CAN_vWriteAMData(0xC48C0000); // load MO0 arbitration register
+   0172 90 00 00           1549 	mov	dptr,#0x0000
+   0175 75 F0 8C           1550 	mov	b,#0x8C
+   0178 74 C4              1551 	mov	a,#0xC4
+   017A 12 01 E3           1552 	lcall	_CAN_vWriteAMData
+                    00BD   1553 	C$CAN.C$307$1$1 ==.
+                           1554 ;	../CAN.C:307: CAN_ADCON = ADR_DEC;         // Auto Decrement the current address(-1)
+   017D 75 D8 08           1555 	mov	_CAN_ADCON,#0x08
+                    00C0   1556 	C$CAN.C$312$1$1 ==.
+                           1557 ;	../CAN.C:312: CAN_vWriteAMData(0x00000000); // load MO0 data register high
+   0180 90 00 00           1558 	mov	dptr,#(0x00&0x00ff)
+   0183 E4                 1559 	clr	a
+   0184 F5 F0              1560 	mov	b,a
+   0186 12 01 E3           1561 	lcall	_CAN_vWriteAMData
+                    00C9   1562 	C$CAN.C$315$1$1 ==.
+                           1563 ;	../CAN.C:315: CAN_ADCON = ADR_DEC;         // Auto Decrement the current address(-1)
+   0189 75 D8 08           1564 	mov	_CAN_ADCON,#0x08
+                    00CC   1565 	C$CAN.C$319$1$1 ==.
+                           1566 ;	../CAN.C:319: CAN_vWriteAMData(0x000000DE); // load MO0 data register low
+   018C 90 00 DE           1567 	mov	dptr,#(0xDE&0x00ff)
+   018F E4                 1568 	clr	a
+   0190 F5 F0              1569 	mov	b,a
+   0192 12 01 E3           1570 	lcall	_CAN_vWriteAMData
+                    00D5   1571 	C$CAN.C$322$1$1 ==.
+                           1572 ;	../CAN.C:322: CAN_ADCON = ADR_DEC;         // Auto Decrement the current address(-1)
+   0195 75 D8 08           1573 	mov	_CAN_ADCON,#0x08
+                    00D8   1574 	C$CAN.C$329$1$1 ==.
+                           1575 ;	../CAN.C:329: CAN_vWriteAMData(0x3FFFFFFF); // load MO0 acceptance mask register
+   0198 90 FF FF           1576 	mov	dptr,#0xFFFF
+   019B 75 F0 FF           1577 	mov	b,#0xFF
+   019E 74 3F              1578 	mov	a,#0x3F
+   01A0 12 01 E3           1579 	lcall	_CAN_vWriteAMData
+                    00E3   1580 	C$CAN.C$332$1$1 ==.
+                           1581 ;	../CAN.C:332: CAN_ADCON = ADR_DEC;         // Auto Decrement the current address(-1)
+   01A3 75 D8 08           1582 	mov	_CAN_ADCON,#0x08
+                    00E6   1583 	C$CAN.C$338$1$1 ==.
+                           1584 ;	../CAN.C:338: CAN_vWriteAMData(0x00000000); // load MO0 interrupt pointer register
+   01A6 90 00 00           1585 	mov	dptr,#(0x00&0x00ff)
+   01A9 E4                 1586 	clr	a
+   01AA F5 F0              1587 	mov	b,a
+   01AC 12 01 E3           1588 	lcall	_CAN_vWriteAMData
+                    00EF   1589 	C$CAN.C$341$1$1 ==.
+                           1590 ;	../CAN.C:341: CAN_ADCON = ADR_DEC;         // Auto Decrement the current address(-1)
+   01AF 75 D8 08           1591 	mov	_CAN_ADCON,#0x08
+                    00F2   1592 	C$CAN.C$346$1$1 ==.
+                           1593 ;	../CAN.C:346: CAN_vWriteAMData(0x00000000); // load MO0 FIFO/gateway pointer register
+   01B2 90 00 00           1594 	mov	dptr,#(0x00&0x00ff)
+   01B5 E4                 1595 	clr	a
+   01B6 F5 F0              1596 	mov	b,a
+   01B8 12 01 E3           1597 	lcall	_CAN_vWriteAMData
+                    00FB   1598 	C$CAN.C$349$1$1 ==.
+                           1599 ;	../CAN.C:349: CAN_ADCON = ADR_DEC;         // Auto Decrement the current address(-1)
+   01BB 75 D8 08           1600 	mov	_CAN_ADCON,#0x08
+                    00FE   1601 	C$CAN.C$356$1$1 ==.
+                           1602 ;	../CAN.C:356: CAN_vWriteAMData(0x01000000); // load MO0  function control register
+   01BE 90 00 00           1603 	mov	dptr,#(0x00&0x00ff)
+   01C1 E4                 1604 	clr	a
+   01C2 F5 F0              1605 	mov	b,a
+   01C4 74 01              1606 	mov	a,#0x01
+   01C6 12 01 E3           1607 	lcall	_CAN_vWriteAMData
+                    0109   1608 	C$CAN.C$504$1$1 ==.
+                           1609 ;	../CAN.C:504: CAN_vWriteCANAddress(CAN_NCR1); // Addressing CAN_NCR1
+   01C9 75 D9 C0           1610 	mov	_CAN_ADL,#0xC0
+   01CC 75 DA 00           1611 	mov	_CAN_ADH,#0x00
+                    010F   1612 	C$CAN.C$505$1$1 ==.
+                           1613 ;	../CAN.C:505: CAN_vReadEN();               // Read Mode is Enabled
+   01CF 75 D8 00           1614 	mov	_CAN_ADCON,#0x00
+   01D2                    1615 00125$:
+   01D2 E5 D8              1616 	mov	a,_CAN_ADCON
+   01D4 20 E1 FB           1617 	jb	acc.1,00125$
+                    0117   1618 	C$CAN.C$506$1$1 ==.
+                           1619 ;	../CAN.C:506: CAN_DATA0  &= ~0x41;         // reset INIT and CCE
+   01D7 53 DB BE           1620 	anl	_CAN_DATA0,#0xBE
+                    011A   1621 	C$CAN.C$507$1$1 ==.
+                           1622 ;	../CAN.C:507: CAN_vWriteEN(D0_VALID);      // Data0 is Valid for transmission and Write 
+   01DA 75 D8 11           1623 	mov	_CAN_ADCON,#0x11
+   01DD                    1624 00128$:
+   01DD E5 D8              1625 	mov	a,_CAN_ADCON
+   01DF 20 E1 FB           1626 	jb	acc.1,00128$
+                    0122   1627 	C$CAN.C$515$1$1 ==.
+                    0122   1628 	XG$CAN_vInit$0$0 ==.
+   01E2 22                 1629 	ret
+                           1630 ;------------------------------------------------------------
+                           1631 ;Allocation info for local variables in function 'CAN_vWriteAMData'
+                           1632 ;------------------------------------------------------------
+                           1633 ;ulValue                   Allocated to registers r2 r3 r4 r5 
+                           1634 ;ulData                    Allocated with name '_CAN_vWriteAMData_ulData_1_1'
+                           1635 ;------------------------------------------------------------
+                    0123   1636 	G$CAN_vWriteAMData$0$0 ==.
+                    0123   1637 	C$CAN.C$554$1$1 ==.
+                           1638 ;	../CAN.C:554: void CAN_vWriteAMData(ulong ulValue)
+                           1639 ;	-----------------------------------------
+                           1640 ;	 function CAN_vWriteAMData
+                           1641 ;	-----------------------------------------
+   01E3                    1642 _CAN_vWriteAMData:
+   01E3 AA 82              1643 	mov	r2,dpl
+   01E5 AB 83              1644 	mov	r3,dph
+   01E7 AC F0              1645 	mov	r4,b
+   01E9 FD                 1646 	mov	r5,a
+                    012A   1647 	C$CAN.C$557$1$1 ==.
+                           1648 ;	../CAN.C:557: ulData.ulVal = ulValue;
+   01EA 8A 08              1649 	mov	_CAN_vWriteAMData_ulData_1_1,r2
+   01EC 8B 09              1650 	mov	(_CAN_vWriteAMData_ulData_1_1 + 1),r3
+   01EE 8C 0A              1651 	mov	(_CAN_vWriteAMData_ulData_1_1 + 2),r4
+   01F0 8D 0B              1652 	mov	(_CAN_vWriteAMData_ulData_1_1 + 3),r5
+                    0132   1653 	C$CAN.C$559$1$1 ==.
+                           1654 ;	../CAN.C:559: CAN_DATA0 = ulData.ubDB[0]; // load CAN Data Register 0
+   01F2 85 08 DB           1655 	mov	_CAN_DATA0,_CAN_vWriteAMData_ulData_1_1
+                    0135   1656 	C$CAN.C$560$1$1 ==.
+                           1657 ;	../CAN.C:560: CAN_DATA1 = ulData.ubDB[1]; // load CAN Data Register 1
+   01F5 85 09 DC           1658 	mov	_CAN_DATA1,(_CAN_vWriteAMData_ulData_1_1 + 0x0001)
+                    0138   1659 	C$CAN.C$561$1$1 ==.
+                           1660 ;	../CAN.C:561: CAN_DATA2 = ulData.ubDB[2]; // load CAN Data Register 2
+   01F8 85 0A DD           1661 	mov	_CAN_DATA2,(_CAN_vWriteAMData_ulData_1_1 + 0x0002)
+                    013B   1662 	C$CAN.C$562$1$1 ==.
+                           1663 ;	../CAN.C:562: CAN_DATA3 = ulData.ubDB[3]; // load CAN Data Register 3
+   01FB 85 0B DE           1664 	mov	_CAN_DATA3,(_CAN_vWriteAMData_ulData_1_1 + 0x0003)
+                    013E   1665 	C$CAN.C$563$1$1 ==.
+                           1666 ;	../CAN.C:563: CAN_vWriteEN(ALL_DATA_VALID); // Writemode is Enabled
+   01FE 75 D8 F1           1667 	mov	_CAN_ADCON,#0xF1
+   0201                    1668 00101$:
+   0201 E5 D8              1669 	mov	a,_CAN_ADCON
+   0203 20 E1 FB           1670 	jb	acc.1,00101$
+                    0146   1671 	C$CAN.C$564$1$1 ==.
+                    0146   1672 	XG$CAN_vWriteAMData$0$0 ==.
+   0206 22                 1673 	ret
+                           1674 ;------------------------------------------------------------
+                           1675 ;Allocation info for local variables in function 'CAN_vSetListCommand'
+                           1676 ;------------------------------------------------------------
+                           1677 ;ulVal                     Allocated to registers r2 r3 r4 r5 
+                           1678 ;------------------------------------------------------------
+                    0147   1679 	G$CAN_vSetListCommand$0$0 ==.
+                    0147   1680 	C$CAN.C$589$1$1 ==.
+                           1681 ;	../CAN.C:589: void CAN_vSetListCommand(ulong ulVal)
+                           1682 ;	-----------------------------------------
+                           1683 ;	 function CAN_vSetListCommand
+                           1684 ;	-----------------------------------------
+   0207                    1685 _CAN_vSetListCommand:
+                    0147   1686 	C$CAN.C$591$1$1 ==.
+                           1687 ;	../CAN.C:591: CAN_vWriteAMData(ulVal);  // - load Panel Control Register
+   0207 12 01 E3           1688 	lcall	_CAN_vWriteAMData
+                    014A   1689 	C$CAN.C$592$1$1 ==.
+                           1690 ;	../CAN.C:592: CAN_DATA1 = CAN_PANCTR_BUSY;
+   020A 75 DC 01           1691 	mov	_CAN_DATA1,#0x01
+                    014D   1692 	C$CAN.C$593$1$1 ==.
+                           1693 ;	../CAN.C:593: while(CAN_DATA1 & CAN_PANCTR_BUSY){ // wait until Panel has finished the 
+   020D                    1694 00101$:
+   020D E5 DC              1695 	mov	a,_CAN_DATA1
+   020F 30 E0 05           1696 	jnb	acc.0,00104$
+                    0152   1697 	C$CAN.C$595$2$2 ==.
+                           1698 ;	../CAN.C:595: CAN_ADCON &= ~0x01;       
+   0212 53 D8 FE           1699 	anl	_CAN_ADCON,#0xFE
+   0215 80 F6              1700 	sjmp	00101$
+   0217                    1701 00104$:
+                    0157   1702 	C$CAN.C$597$1$1 ==.
+                    0157   1703 	XG$CAN_vSetListCommand$0$0 ==.
+   0217 22                 1704 	ret
+                           1705 ;------------------------------------------------------------
+                           1706 ;Allocation info for local variables in function 'CAN_vGetMsgObj'
+                           1707 ;------------------------------------------------------------
+                           1708 ;pstObj                    Allocated with name '_CAN_vGetMsgObj_PARM_2'
+                           1709 ;ubObjNr                   Allocated to registers r2 
+                           1710 ;ubTemp                    Allocated with name '_CAN_vGetMsgObj_ubTemp_1_1'
+                           1711 ;sloc0                     Allocated with name '_CAN_vGetMsgObj_sloc0_1_0'
+                           1712 ;sloc1                     Allocated with name '_CAN_vGetMsgObj_sloc1_1_0'
+                           1713 ;sloc2                     Allocated with name '_CAN_vGetMsgObj_sloc2_1_0'
+                           1714 ;------------------------------------------------------------
+                    0158   1715 	G$CAN_vGetMsgObj$0$0 ==.
+                    0158   1716 	C$CAN.C$627$1$1 ==.
+                           1717 ;	../CAN.C:627: void CAN_vGetMsgObj(ubyte ubObjNr, stCAN_SWObj *pstObj)
+                           1718 ;	-----------------------------------------
+                           1719 ;	 function CAN_vGetMsgObj
+                           1720 ;	-----------------------------------------
+   0218                    1721 _CAN_vGetMsgObj:
+   0218 AA 82              1722 	mov	r2,dpl
+                    015A   1723 	C$CAN.C$631$1$1 ==.
+                           1724 ;	../CAN.C:631: CAN_pushAMRegs();    //   PUSH the CAN Access Mediator Register
+   021A                    1725 00101$:
+   021A E5 D8              1726 	mov	a,_CAN_ADCON
+   021C 20 E1 FB           1727 	jb	acc.1,00101$
+   021F C0 D9 C0 DA C0 DB  1728 	 push 0xD9 push 0xDA push 0xDB push 0xDC push 0xDD push 0xDE 
+        C0 DC C0 DD C0 DE
+                    016B   1729 	C$CAN.C$635$1$1 ==.
+                           1730 ;	../CAN.C:635: CAN_vWriteCANAddress(CAN_MOFCR(ubObjNr));
+   022B EA                 1731 	mov	a,r2
+   022C C4                 1732 	swap	a
+   022D 03                 1733 	rr	a
+   022E 54 F8              1734 	anl	a,#0xf8
+   0230 F5 13              1735 	mov	_CAN_vGetMsgObj_sloc1_1_0,a
+   0232 85 13 D9           1736 	mov	_CAN_ADL,_CAN_vGetMsgObj_sloc1_1_0
+   0235 EA                 1737 	mov	a,r2
+   0236 75 F0 08           1738 	mov	b,#0x08
+   0239 A4                 1739 	mul	ab
+   023A FA                 1740 	mov	r2,a
+   023B AC F0              1741 	mov	r4,b
+   023D 8A 05              1742 	mov	ar5,r2
+   023F 74 04              1743 	mov	a,#0x04
+   0241 2C                 1744 	add	a,r4
+   0242 FE                 1745 	mov	r6,a
+   0243 7D 00              1746 	mov	r5,#0x00
+   0245 8E DA              1747 	mov	_CAN_ADH,r6
+                    0187   1748 	C$CAN.C$636$1$1 ==.
+                           1749 ;	../CAN.C:636: CAN_vReadEN();   // Readmode is Enabled
+   0247 75 D8 00           1750 	mov	_CAN_ADCON,#0x00
+   024A                    1751 00104$:
+   024A E5 D8              1752 	mov	a,_CAN_ADCON
+   024C 20 E1 FB           1753 	jb	acc.1,00104$
+                    018F   1754 	C$CAN.C$638$1$1 ==.
+                           1755 ;	../CAN.C:638: pstObj->ubMOdlc  =  CAN_DATA3;//MOFCRn[31-24] DLC
+   024F AD 0C              1756 	mov	r5,_CAN_vGetMsgObj_PARM_2
+   0251 AE 0D              1757 	mov	r6,(_CAN_vGetMsgObj_PARM_2 + 1)
+   0253 AF 0E              1758 	mov	r7,(_CAN_vGetMsgObj_PARM_2 + 2)
+   0255 8D 82              1759 	mov	dpl,r5
+   0257 8E 83              1760 	mov	dph,r6
+   0259 8F F0              1761 	mov	b,r7
+   025B E5 DE              1762 	mov	a,_CAN_DATA3
+   025D 12 08 B1           1763 	lcall	__gptrput
+                    01A0   1764 	C$CAN.C$641$1$1 ==.
+                           1765 ;	../CAN.C:641: CAN_vWriteCANAddress(CAN_MODATAL(ubObjNr));
+   0260 74 04              1766 	mov	a,#0x04
+   0262 25 13              1767 	add	a,_CAN_vGetMsgObj_sloc1_1_0
+   0264 F5 D9              1768 	mov	_CAN_ADL,a
+   0266 74 04              1769 	mov	a,#0x04
+   0268 2A                 1770 	add	a,r2
+   0269 74 04              1771 	mov	a,#0x04
+   026B 3C                 1772 	addc	a,r4
+   026C F9                 1773 	mov	r1,a
+   026D 78 00              1774 	mov	r0,#0x00
+   026F 89 DA              1775 	mov	_CAN_ADH,r1
+                    01B1   1776 	C$CAN.C$643$1$1 ==.
+                           1777 ;	../CAN.C:643: CAN_vReadEN();  // Readmode is Enabled
+   0271 75 D8 00           1778 	mov	_CAN_ADCON,#0x00
+   0274                    1779 00107$:
+   0274 E5 D8              1780 	mov	a,_CAN_ADCON
+   0276 20 E1 FB           1781 	jb	acc.1,00107$
+                    01B9   1782 	C$CAN.C$644$1$1 ==.
+                           1783 ;	../CAN.C:644: pstObj->ulDATAL.ubDB[0] = CAN_DATA0; // Read CAN Data Register 0
+   0279 74 0A              1784 	mov	a,#0x0A
+   027B 2D                 1785 	add	a,r5
+   027C F8                 1786 	mov	r0,a
+   027D E4                 1787 	clr	a
+   027E 3E                 1788 	addc	a,r6
+   027F F9                 1789 	mov	r1,a
+   0280 8F 03              1790 	mov	ar3,r7
+   0282 88 82              1791 	mov	dpl,r0
+   0284 89 83              1792 	mov	dph,r1
+   0286 8B F0              1793 	mov	b,r3
+   0288 E5 DB              1794 	mov	a,_CAN_DATA0
+   028A 12 08 B1           1795 	lcall	__gptrput
+                    01CD   1796 	C$CAN.C$645$1$1 ==.
+                           1797 ;	../CAN.C:645: pstObj->ulDATAL.ubDB[1] = CAN_DATA1; // Read CAN Data Register 1
+   028D 74 0A              1798 	mov	a,#0x0A
+   028F 2D                 1799 	add	a,r5
+   0290 F5 10              1800 	mov	_CAN_vGetMsgObj_sloc0_1_0,a
+   0292 E4                 1801 	clr	a
+   0293 3E                 1802 	addc	a,r6
+   0294 F5 11              1803 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 1),a
+   0296 8F 12              1804 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 2),r7
+   0298 74 01              1805 	mov	a,#0x01
+   029A 25 10              1806 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   029C FB                 1807 	mov	r3,a
+   029D E4                 1808 	clr	a
+   029E 35 11              1809 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   02A0 F8                 1810 	mov	r0,a
+   02A1 A9 12              1811 	mov	r1,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   02A3 8B 82              1812 	mov	dpl,r3
+   02A5 88 83              1813 	mov	dph,r0
+   02A7 89 F0              1814 	mov	b,r1
+   02A9 E5 DC              1815 	mov	a,_CAN_DATA1
+   02AB 12 08 B1           1816 	lcall	__gptrput
+                    01EE   1817 	C$CAN.C$646$1$1 ==.
+                           1818 ;	../CAN.C:646: pstObj->ulDATAL.ubDB[2] = CAN_DATA2; // Read CAN Data Register 2
+   02AE 74 02              1819 	mov	a,#0x02
+   02B0 25 10              1820 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   02B2 FB                 1821 	mov	r3,a
+   02B3 E4                 1822 	clr	a
+   02B4 35 11              1823 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   02B6 F8                 1824 	mov	r0,a
+   02B7 A9 12              1825 	mov	r1,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   02B9 8B 82              1826 	mov	dpl,r3
+   02BB 88 83              1827 	mov	dph,r0
+   02BD 89 F0              1828 	mov	b,r1
+   02BF E5 DD              1829 	mov	a,_CAN_DATA2
+   02C1 12 08 B1           1830 	lcall	__gptrput
+                    0204   1831 	C$CAN.C$647$1$1 ==.
+                           1832 ;	../CAN.C:647: pstObj->ulDATAL.ubDB[3] = CAN_DATA3; // Read CAN Data Register 3
+   02C4 74 03              1833 	mov	a,#0x03
+   02C6 25 10              1834 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   02C8 FB                 1835 	mov	r3,a
+   02C9 E4                 1836 	clr	a
+   02CA 35 11              1837 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   02CC F8                 1838 	mov	r0,a
+   02CD A9 12              1839 	mov	r1,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   02CF 8B 82              1840 	mov	dpl,r3
+   02D1 88 83              1841 	mov	dph,r0
+   02D3 89 F0              1842 	mov	b,r1
+   02D5 E5 DE              1843 	mov	a,_CAN_DATA3
+   02D7 12 08 B1           1844 	lcall	__gptrput
+                    021A   1845 	C$CAN.C$650$1$1 ==.
+                           1846 ;	../CAN.C:650: CAN_ADCON = ADR_INC;
+   02DA 75 D8 04           1847 	mov	_CAN_ADCON,#0x04
+                    021D   1848 	C$CAN.C$654$1$1 ==.
+                           1849 ;	../CAN.C:654: CAN_vReadEN();  // Readmode is Enabled
+   02DD 75 D8 00           1850 	mov	_CAN_ADCON,#0x00
+                    0220   1851 	C$CAN.C$748$1$1 ==.
+                           1852 ;	../CAN.C:748: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+                    0220   1853 	C$CAN.C$654$1$1 ==.
+                           1854 ;	../CAN.C:654: CAN_vReadEN();  // Readmode is Enabled
+   02E0                    1855 00110$:
+   02E0 E5 D8              1856 	mov	a,_CAN_ADCON
+   02E2 20 E1 FB           1857 	jb	acc.1,00110$
+                    0225   1858 	C$CAN.C$655$1$1 ==.
+                           1859 ;	../CAN.C:655: pstObj->ulDATAH.ubDB[0] = CAN_DATA0; // Read CAN Data Register 0
+   02E5 74 0E              1860 	mov	a,#0x0E
+   02E7 2D                 1861 	add	a,r5
+   02E8 F8                 1862 	mov	r0,a
+   02E9 E4                 1863 	clr	a
+   02EA 3E                 1864 	addc	a,r6
+   02EB F9                 1865 	mov	r1,a
+   02EC 8F 03              1866 	mov	ar3,r7
+   02EE 88 82              1867 	mov	dpl,r0
+   02F0 89 83              1868 	mov	dph,r1
+   02F2 8B F0              1869 	mov	b,r3
+   02F4 E5 DB              1870 	mov	a,_CAN_DATA0
+   02F6 12 08 B1           1871 	lcall	__gptrput
+                    0239   1872 	C$CAN.C$656$1$1 ==.
+                           1873 ;	../CAN.C:656: pstObj->ulDATAH.ubDB[1] = CAN_DATA1; // Read CAN Data Register 1
+   02F9 74 0E              1874 	mov	a,#0x0E
+   02FB 2D                 1875 	add	a,r5
+   02FC FB                 1876 	mov	r3,a
+   02FD E4                 1877 	clr	a
+   02FE 3E                 1878 	addc	a,r6
+   02FF F8                 1879 	mov	r0,a
+   0300 8F 01              1880 	mov	ar1,r7
+   0302 C0 05              1881 	push	ar5
+   0304 C0 06              1882 	push	ar6
+   0306 C0 07              1883 	push	ar7
+   0308 74 01              1884 	mov	a,#0x01
+   030A 2B                 1885 	add	a,r3
+   030B FD                 1886 	mov	r5,a
+   030C E4                 1887 	clr	a
+   030D 38                 1888 	addc	a,r0
+   030E FE                 1889 	mov	r6,a
+   030F 89 07              1890 	mov	ar7,r1
+   0311 8D 82              1891 	mov	dpl,r5
+   0313 8E 83              1892 	mov	dph,r6
+   0315 8F F0              1893 	mov	b,r7
+   0317 E5 DC              1894 	mov	a,_CAN_DATA1
+   0319 12 08 B1           1895 	lcall	__gptrput
+                    025C   1896 	C$CAN.C$657$1$1 ==.
+                           1897 ;	../CAN.C:657: pstObj->ulDATAH.ubDB[2] = CAN_DATA2; // Read CAN Data Register 2
+   031C 74 02              1898 	mov	a,#0x02
+   031E 2B                 1899 	add	a,r3
+   031F FD                 1900 	mov	r5,a
+   0320 E4                 1901 	clr	a
+   0321 38                 1902 	addc	a,r0
+   0322 FE                 1903 	mov	r6,a
+   0323 89 07              1904 	mov	ar7,r1
+   0325 8D 82              1905 	mov	dpl,r5
+   0327 8E 83              1906 	mov	dph,r6
+   0329 8F F0              1907 	mov	b,r7
+   032B E5 DD              1908 	mov	a,_CAN_DATA2
+   032D 12 08 B1           1909 	lcall	__gptrput
+                    0270   1910 	C$CAN.C$658$1$1 ==.
+                           1911 ;	../CAN.C:658: pstObj->ulDATAH.ubDB[3] = CAN_DATA3; // Read CAN Data Register 3
+   0330 74 03              1912 	mov	a,#0x03
+   0332 2B                 1913 	add	a,r3
+   0333 FB                 1914 	mov	r3,a
+   0334 E4                 1915 	clr	a
+   0335 38                 1916 	addc	a,r0
+   0336 F8                 1917 	mov	r0,a
+   0337 8B 82              1918 	mov	dpl,r3
+   0339 88 83              1919 	mov	dph,r0
+   033B 89 F0              1920 	mov	b,r1
+   033D E5 DE              1921 	mov	a,_CAN_DATA3
+   033F 12 08 B1           1922 	lcall	__gptrput
+                    0282   1923 	C$CAN.C$661$1$1 ==.
+                           1924 ;	../CAN.C:661: CAN_vWriteCANAddress(CAN_MOCTR(ubObjNr));
+   0342 74 07              1925 	mov	a,#0x07
+   0344 25 13              1926 	add	a,_CAN_vGetMsgObj_sloc1_1_0
+   0346 F5 D9              1927 	mov	_CAN_ADL,a
+   0348 74 07              1928 	mov	a,#0x07
+   034A 2A                 1929 	add	a,r2
+   034B 74 04              1930 	mov	a,#0x04
+   034D 3C                 1931 	addc	a,r4
+   034E FD                 1932 	mov	r5,a
+   034F 7B 00              1933 	mov	r3,#0x00
+   0351 8D DA              1934 	mov	_CAN_ADH,r5
+                    0293   1935 	C$CAN.C$662$1$1 ==.
+                           1936 ;	../CAN.C:662: CAN_vReadEN();   // Readmode is Enabled
+   0353 75 D8 00           1937 	mov	_CAN_ADCON,#0x00
+                    0296   1938 	C$CAN.C$748$1$1 ==.
+                           1939 ;	../CAN.C:748: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+   0356 D0 07              1940 	pop	ar7
+   0358 D0 06              1941 	pop	ar6
+   035A D0 05              1942 	pop	ar5
+                    029C   1943 	C$CAN.C$662$1$1 ==.
+                           1944 ;	../CAN.C:662: CAN_vReadEN();   // Readmode is Enabled
+   035C                    1945 00113$:
+   035C E5 D8              1946 	mov	a,_CAN_ADCON
+   035E 20 E1 FB           1947 	jb	acc.1,00113$
+                    02A1   1948 	C$CAN.C$664$1$1 ==.
+                           1949 ;	../CAN.C:664: if(CAN_DATA1 & 0x08)   // if transmit object (MOSTAT_DIR)
+   0361 E5 DC              1950 	mov	a,_CAN_DATA1
+   0363 30 E3 28           1951 	jnb	acc.3,00117$
+                    02A6   1952 	C$CAN.C$666$1$1 ==.
+                           1953 ;	../CAN.C:666: pstObj->ubMOcfg  = (pstObj->ubMOcfg | 0x08);  // set DIR
+   0366 C0 02              1954 	push	ar2
+   0368 C0 04              1955 	push	ar4
+   036A 74 01              1956 	mov	a,#0x01
+   036C 2D                 1957 	add	a,r5
+   036D FB                 1958 	mov	r3,a
+   036E E4                 1959 	clr	a
+   036F 3E                 1960 	addc	a,r6
+   0370 F8                 1961 	mov	r0,a
+   0371 8F 01              1962 	mov	ar1,r7
+   0373 8B 82              1963 	mov	dpl,r3
+   0375 88 83              1964 	mov	dph,r0
+   0377 89 F0              1965 	mov	b,r1
+   0379 12 08 CA           1966 	lcall	__gptrget
+   037C FA                 1967 	mov	r2,a
+   037D 43 02 08           1968 	orl	ar2,#0x08
+   0380 8B 82              1969 	mov	dpl,r3
+   0382 88 83              1970 	mov	dph,r0
+   0384 89 F0              1971 	mov	b,r1
+   0386 EA                 1972 	mov	a,r2
+   0387 12 08 B1           1973 	lcall	__gptrput
+                    02CA   1974 	C$CAN.C$748$1$1 ==.
+                           1975 ;	../CAN.C:748: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+   038A D0 04              1976 	pop	ar4
+   038C D0 02              1977 	pop	ar2
+                    02CE   1978 	C$CAN.C$666$1$1 ==.
+                           1979 ;	../CAN.C:666: pstObj->ubMOcfg  = (pstObj->ubMOcfg | 0x08);  // set DIR
+   038E                    1980 00117$:
+                    02CE   1981 	C$CAN.C$672$1$1 ==.
+                           1982 ;	../CAN.C:672: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   038E 75 D8 08           1983 	mov	_CAN_ADCON,#0x08
+                    02D1   1984 	C$CAN.C$673$1$1 ==.
+                           1985 ;	../CAN.C:673: CAN_vReadEN();   // ReadMode is Enabled
+   0391 75 D8 00           1986 	mov	_CAN_ADCON,#0x00
+   0394                    1987 00118$:
+   0394 E5 D8              1988 	mov	a,_CAN_ADCON
+   0396 20 E1 FB           1989 	jb	acc.1,00118$
+                    02D9   1990 	C$CAN.C$675$1$1 ==.
+                           1991 ;	../CAN.C:675: if(CAN_DATA3 & 0x20)   // if extended identifier
+   0399 E5 DE              1992 	mov	a,_CAN_DATA3
+   039B 20 E5 03           1993 	jb	acc.5,00162$
+   039E 02 04 AC           1994 	ljmp	00128$
+   03A1                    1995 00162$:
+                    02E1   1996 	C$CAN.C$679$1$1 ==.
+                           1997 ;	../CAN.C:679: pstObj->ulID.ubDB[0] = CAN_DATA0;   // MOARn[7-0]
+   03A1 C0 02              1998 	push	ar2
+   03A3 C0 04              1999 	push	ar4
+   03A5 74 02              2000 	mov	a,#0x02
+   03A7 2D                 2001 	add	a,r5
+   03A8 FB                 2002 	mov	r3,a
+   03A9 E4                 2003 	clr	a
+   03AA 3E                 2004 	addc	a,r6
+   03AB F8                 2005 	mov	r0,a
+   03AC 8F 01              2006 	mov	ar1,r7
+   03AE 8B 82              2007 	mov	dpl,r3
+   03B0 88 83              2008 	mov	dph,r0
+   03B2 89 F0              2009 	mov	b,r1
+   03B4 E5 DB              2010 	mov	a,_CAN_DATA0
+   03B6 12 08 B1           2011 	lcall	__gptrput
+                    02F9   2012 	C$CAN.C$680$2$3 ==.
+                           2013 ;	../CAN.C:680: pstObj->ulID.ubDB[1] = CAN_DATA1;   // MOARn[15-8]
+   03B9 74 02              2014 	mov	a,#0x02
+   03BB 2D                 2015 	add	a,r5
+   03BC F5 10              2016 	mov	_CAN_vGetMsgObj_sloc0_1_0,a
+   03BE E4                 2017 	clr	a
+   03BF 3E                 2018 	addc	a,r6
+   03C0 F5 11              2019 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 1),a
+   03C2 8F 12              2020 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 2),r7
+   03C4 74 01              2021 	mov	a,#0x01
+   03C6 25 10              2022 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   03C8 FA                 2023 	mov	r2,a
+   03C9 E4                 2024 	clr	a
+   03CA 35 11              2025 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   03CC FC                 2026 	mov	r4,a
+   03CD AB 12              2027 	mov	r3,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   03CF 8A 82              2028 	mov	dpl,r2
+   03D1 8C 83              2029 	mov	dph,r4
+   03D3 8B F0              2030 	mov	b,r3
+   03D5 E5 DC              2031 	mov	a,_CAN_DATA1
+   03D7 12 08 B1           2032 	lcall	__gptrput
+                    031A   2033 	C$CAN.C$681$2$3 ==.
+                           2034 ;	../CAN.C:681: pstObj->ulID.ubDB[2] = CAN_DATA2;   // MOARn[23-16]
+   03DA 74 02              2035 	mov	a,#0x02
+   03DC 25 10              2036 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   03DE FA                 2037 	mov	r2,a
+   03DF E4                 2038 	clr	a
+   03E0 35 11              2039 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   03E2 FB                 2040 	mov	r3,a
+   03E3 AC 12              2041 	mov	r4,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   03E5 8A 82              2042 	mov	dpl,r2
+   03E7 8B 83              2043 	mov	dph,r3
+   03E9 8C F0              2044 	mov	b,r4
+   03EB E5 DD              2045 	mov	a,_CAN_DATA2
+   03ED 12 08 B1           2046 	lcall	__gptrput
+                    0330   2047 	C$CAN.C$682$2$3 ==.
+                           2048 ;	../CAN.C:682: pstObj->ulID.ubDB[3] = (CAN_DATA3 & 0x1f);  // MOARn[31-24]
+   03F0 74 03              2049 	mov	a,#0x03
+   03F2 25 10              2050 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   03F4 FA                 2051 	mov	r2,a
+   03F5 E4                 2052 	clr	a
+   03F6 35 11              2053 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   03F8 FB                 2054 	mov	r3,a
+   03F9 AC 12              2055 	mov	r4,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   03FB 74 1F              2056 	mov	a,#0x1F
+   03FD 55 DE              2057 	anl	a,_CAN_DATA3
+   03FF F8                 2058 	mov	r0,a
+   0400 8A 82              2059 	mov	dpl,r2
+   0402 8B 83              2060 	mov	dph,r3
+   0404 8C F0              2061 	mov	b,r4
+   0406 12 08 B1           2062 	lcall	__gptrput
+                    0349   2063 	C$CAN.C$685$2$3 ==.
+                           2064 ;	../CAN.C:685: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   0409 75 D8 08           2065 	mov	_CAN_ADCON,#0x08
+                    034C   2066 	C$CAN.C$688$2$3 ==.
+                           2067 ;	../CAN.C:688: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   040C 75 D8 08           2068 	mov	_CAN_ADCON,#0x08
+                    034F   2069 	C$CAN.C$691$2$3 ==.
+                           2070 ;	../CAN.C:691: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   040F 75 D8 08           2071 	mov	_CAN_ADCON,#0x08
+                    0352   2072 	C$CAN.C$693$2$3 ==.
+                           2073 ;	../CAN.C:693: CAN_vReadEN();   // ReadMode is Enabled
+   0412 75 D8 00           2074 	mov	_CAN_ADCON,#0x00
+                    0355   2075 	C$CAN.C$748$1$1 ==.
+                           2076 ;	../CAN.C:748: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+   0415 D0 04              2077 	pop	ar4
+   0417 D0 02              2078 	pop	ar2
+                    0359   2079 	C$CAN.C$693$2$3 ==.
+                           2080 ;	../CAN.C:693: CAN_vReadEN();   // ReadMode is Enabled
+   0419                    2081 00121$:
+   0419 E5 D8              2082 	mov	a,_CAN_ADCON
+   041B 20 E1 FB           2083 	jb	acc.1,00121$
+                    035E   2084 	C$CAN.C$696$1$1 ==.
+                           2085 ;	../CAN.C:696: pstObj->ulMask.ubDB[0] = CAN_DATA0;   // MOAMRn[7-0]
+   041E C0 02              2086 	push	ar2
+   0420 C0 04              2087 	push	ar4
+   0422 74 06              2088 	mov	a,#0x06
+   0424 2D                 2089 	add	a,r5
+   0425 FB                 2090 	mov	r3,a
+   0426 E4                 2091 	clr	a
+   0427 3E                 2092 	addc	a,r6
+   0428 F8                 2093 	mov	r0,a
+   0429 8F 01              2094 	mov	ar1,r7
+   042B 8B 82              2095 	mov	dpl,r3
+   042D 88 83              2096 	mov	dph,r0
+   042F 89 F0              2097 	mov	b,r1
+   0431 E5 DB              2098 	mov	a,_CAN_DATA0
+   0433 12 08 B1           2099 	lcall	__gptrput
+                    0376   2100 	C$CAN.C$697$2$3 ==.
+                           2101 ;	../CAN.C:697: pstObj->ulMask.ubDB[1] = CAN_DATA1;   // MOAMRn[15-8]
+   0436 74 06              2102 	mov	a,#0x06
+   0438 2D                 2103 	add	a,r5
+   0439 F5 10              2104 	mov	_CAN_vGetMsgObj_sloc0_1_0,a
+   043B E4                 2105 	clr	a
+   043C 3E                 2106 	addc	a,r6
+   043D F5 11              2107 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 1),a
+   043F 8F 12              2108 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 2),r7
+   0441 74 01              2109 	mov	a,#0x01
+   0443 25 10              2110 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   0445 FA                 2111 	mov	r2,a
+   0446 E4                 2112 	clr	a
+   0447 35 11              2113 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   0449 FC                 2114 	mov	r4,a
+   044A AB 12              2115 	mov	r3,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   044C 8A 82              2116 	mov	dpl,r2
+   044E 8C 83              2117 	mov	dph,r4
+   0450 8B F0              2118 	mov	b,r3
+   0452 E5 DC              2119 	mov	a,_CAN_DATA1
+   0454 12 08 B1           2120 	lcall	__gptrput
+                    0397   2121 	C$CAN.C$698$2$3 ==.
+                           2122 ;	../CAN.C:698: pstObj->ulMask.ubDB[2] = CAN_DATA2;   // MOAMRn[23-16]
+   0457 74 02              2123 	mov	a,#0x02
+   0459 25 10              2124 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   045B FA                 2125 	mov	r2,a
+   045C E4                 2126 	clr	a
+   045D 35 11              2127 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   045F FB                 2128 	mov	r3,a
+   0460 AC 12              2129 	mov	r4,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   0462 8A 82              2130 	mov	dpl,r2
+   0464 8B 83              2131 	mov	dph,r3
+   0466 8C F0              2132 	mov	b,r4
+   0468 E5 DD              2133 	mov	a,_CAN_DATA2
+   046A 12 08 B1           2134 	lcall	__gptrput
+                    03AD   2135 	C$CAN.C$699$2$3 ==.
+                           2136 ;	../CAN.C:699: pstObj->ulMask.ubDB[3] = (CAN_DATA3 & 0x1f);      // MOAMRn[31-24]
+   046D 74 03              2137 	mov	a,#0x03
+   046F 25 10              2138 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   0471 FA                 2139 	mov	r2,a
+   0472 E4                 2140 	clr	a
+   0473 35 11              2141 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   0475 FB                 2142 	mov	r3,a
+   0476 AC 12              2143 	mov	r4,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   0478 74 1F              2144 	mov	a,#0x1F
+   047A 55 DE              2145 	anl	a,_CAN_DATA3
+   047C 8A 82              2146 	mov	dpl,r2
+   047E 8B 83              2147 	mov	dph,r3
+   0480 8C F0              2148 	mov	b,r4
+   0482 12 08 B1           2149 	lcall	__gptrput
+                    03C5   2150 	C$CAN.C$701$2$3 ==.
+                           2151 ;	../CAN.C:701: pstObj->ubMOcfg  = (pstObj->ubMOcfg | 0x04);      // set IDE 29-bit
+   0485 74 01              2152 	mov	a,#0x01
+   0487 2D                 2153 	add	a,r5
+   0488 FA                 2154 	mov	r2,a
+   0489 E4                 2155 	clr	a
+   048A 3E                 2156 	addc	a,r6
+   048B FB                 2157 	mov	r3,a
+   048C 8F 04              2158 	mov	ar4,r7
+   048E 8A 82              2159 	mov	dpl,r2
+   0490 8B 83              2160 	mov	dph,r3
+   0492 8C F0              2161 	mov	b,r4
+   0494 12 08 CA           2162 	lcall	__gptrget
+   0497 F8                 2163 	mov	r0,a
+   0498 43 00 04           2164 	orl	ar0,#0x04
+   049B 8A 82              2165 	mov	dpl,r2
+   049D 8B 83              2166 	mov	dph,r3
+   049F 8C F0              2167 	mov	b,r4
+   04A1 E8                 2168 	mov	a,r0
+   04A2 12 08 B1           2169 	lcall	__gptrput
+   04A5 D0 04              2170 	pop	ar4
+   04A7 D0 02              2171 	pop	ar2
+   04A9 02 06 47           2172 	ljmp	00129$
+   04AC                    2173 00128$:
+                    03EC   2174 	C$CAN.C$706$1$1 ==.
+                           2175 ;	../CAN.C:706: pstObj->ulID.ubDB[0] = (CAN_DATA2 & 0xFC) >> 2;   // MOARn[23-16]
+   04AC C0 02              2176 	push	ar2
+   04AE C0 04              2177 	push	ar4
+   04B0 74 02              2178 	mov	a,#0x02
+   04B2 2D                 2179 	add	a,r5
+   04B3 FB                 2180 	mov	r3,a
+   04B4 E4                 2181 	clr	a
+   04B5 3E                 2182 	addc	a,r6
+   04B6 F8                 2183 	mov	r0,a
+   04B7 8F 01              2184 	mov	ar1,r7
+   04B9 74 FC              2185 	mov	a,#0xFC
+   04BB 55 DD              2186 	anl	a,_CAN_DATA2
+   04BD 03                 2187 	rr	a
+   04BE 03                 2188 	rr	a
+   04BF 54 3F              2189 	anl	a,#0x3f
+   04C1 8B 82              2190 	mov	dpl,r3
+   04C3 88 83              2191 	mov	dph,r0
+   04C5 89 F0              2192 	mov	b,r1
+   04C7 12 08 B1           2193 	lcall	__gptrput
+                    040A   2194 	C$CAN.C$707$2$4 ==.
+                           2195 ;	../CAN.C:707: pstObj->ulID.ubDB[1] = (CAN_DATA3 & 0x1f);        // MOARn[31-24]
+   04CA 74 02              2196 	mov	a,#0x02
+   04CC 2D                 2197 	add	a,r5
+   04CD F5 10              2198 	mov	_CAN_vGetMsgObj_sloc0_1_0,a
+   04CF E4                 2199 	clr	a
+   04D0 3E                 2200 	addc	a,r6
+   04D1 F5 11              2201 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 1),a
+   04D3 8F 12              2202 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 2),r7
+   04D5 74 01              2203 	mov	a,#0x01
+   04D7 25 10              2204 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   04D9 F5 14              2205 	mov	_CAN_vGetMsgObj_sloc2_1_0,a
+   04DB E4                 2206 	clr	a
+   04DC 35 11              2207 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   04DE F5 15              2208 	mov	(_CAN_vGetMsgObj_sloc2_1_0 + 1),a
+   04E0 85 12 16           2209 	mov	(_CAN_vGetMsgObj_sloc2_1_0 + 2),(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   04E3 74 1F              2210 	mov	a,#0x1F
+   04E5 55 DE              2211 	anl	a,_CAN_DATA3
+   04E7 85 14 82           2212 	mov	dpl,_CAN_vGetMsgObj_sloc2_1_0
+   04EA 85 15 83           2213 	mov	dph,(_CAN_vGetMsgObj_sloc2_1_0 + 1)
+   04ED 85 16 F0           2214 	mov	b,(_CAN_vGetMsgObj_sloc2_1_0 + 2)
+   04F0 12 08 B1           2215 	lcall	__gptrput
+                    0433   2216 	C$CAN.C$708$2$4 ==.
+                           2217 ;	../CAN.C:708: pstObj->ulID.ubDB[2] = 0x00;    // MOARn[15-8]
+   04F3 74 02              2218 	mov	a,#0x02
+   04F5 25 10              2219 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   04F7 FB                 2220 	mov	r3,a
+   04F8 E4                 2221 	clr	a
+   04F9 35 11              2222 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   04FB FC                 2223 	mov	r4,a
+   04FC AA 12              2224 	mov	r2,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   04FE 8B 82              2225 	mov	dpl,r3
+   0500 8C 83              2226 	mov	dph,r4
+   0502 8A F0              2227 	mov	b,r2
+   0504 E4                 2228 	clr	a
+   0505 12 08 B1           2229 	lcall	__gptrput
+                    0448   2230 	C$CAN.C$709$2$4 ==.
+                           2231 ;	../CAN.C:709: pstObj->ulID.ubDB[3] = 0x00;    // MOARn[15-8]
+   0508 74 03              2232 	mov	a,#0x03
+   050A 25 10              2233 	add	a,_CAN_vGetMsgObj_sloc0_1_0
+   050C FA                 2234 	mov	r2,a
+   050D E4                 2235 	clr	a
+   050E 35 11              2236 	addc	a,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   0510 FB                 2237 	mov	r3,a
+   0511 AC 12              2238 	mov	r4,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   0513 8A 82              2239 	mov	dpl,r2
+   0515 8B 83              2240 	mov	dph,r3
+   0517 8C F0              2241 	mov	b,r4
+   0519 E4                 2242 	clr	a
+   051A 12 08 B1           2243 	lcall	__gptrput
+                    045D   2244 	C$CAN.C$712$2$4 ==.
+                           2245 ;	../CAN.C:712: ubTemp = ((pstObj->ulID.ubDB[1]) & 0x03) << 6;
+   051D 85 14 82           2246 	mov	dpl,_CAN_vGetMsgObj_sloc2_1_0
+   0520 85 15 83           2247 	mov	dph,(_CAN_vGetMsgObj_sloc2_1_0 + 1)
+   0523 85 16 F0           2248 	mov	b,(_CAN_vGetMsgObj_sloc2_1_0 + 2)
+   0526 12 08 CA           2249 	lcall	__gptrget
+   0529 54 03              2250 	anl	a,#0x03
+   052B 03                 2251 	rr	a
+   052C 03                 2252 	rr	a
+   052D 54 C0              2253 	anl	a,#0xc0
+   052F F5 0F              2254 	mov	_CAN_vGetMsgObj_ubTemp_1_1,a
+                    0471   2255 	C$CAN.C$713$2$4 ==.
+                           2256 ;	../CAN.C:713: pstObj->ulID.ubDB[1] = (pstObj->ulID.ubDB[1] >> 2);
+   0531 85 14 82           2257 	mov	dpl,_CAN_vGetMsgObj_sloc2_1_0
+   0534 85 15 83           2258 	mov	dph,(_CAN_vGetMsgObj_sloc2_1_0 + 1)
+   0537 85 16 F0           2259 	mov	b,(_CAN_vGetMsgObj_sloc2_1_0 + 2)
+   053A 12 08 CA           2260 	lcall	__gptrget
+   053D 03                 2261 	rr	a
+   053E 03                 2262 	rr	a
+   053F 54 3F              2263 	anl	a,#0x3f
+   0541 85 14 82           2264 	mov	dpl,_CAN_vGetMsgObj_sloc2_1_0
+   0544 85 15 83           2265 	mov	dph,(_CAN_vGetMsgObj_sloc2_1_0 + 1)
+   0547 85 16 F0           2266 	mov	b,(_CAN_vGetMsgObj_sloc2_1_0 + 2)
+   054A 12 08 B1           2267 	lcall	__gptrput
+                    048D   2268 	C$CAN.C$714$2$4 ==.
+                           2269 ;	../CAN.C:714: pstObj->ulID.ubDB[0] = (pstObj->ulID.ubDB[0] + ubTemp);
+   054D 74 02              2270 	mov	a,#0x02
+   054F 2D                 2271 	add	a,r5
+   0550 FA                 2272 	mov	r2,a
+   0551 E4                 2273 	clr	a
+   0552 3E                 2274 	addc	a,r6
+   0553 FB                 2275 	mov	r3,a
+   0554 8F 04              2276 	mov	ar4,r7
+   0556 8A 82              2277 	mov	dpl,r2
+   0558 8B 83              2278 	mov	dph,r3
+   055A 8C F0              2279 	mov	b,r4
+   055C 12 08 CA           2280 	lcall	__gptrget
+   055F F8                 2281 	mov	r0,a
+   0560 E5 0F              2282 	mov	a,_CAN_vGetMsgObj_ubTemp_1_1
+   0562 28                 2283 	add	a,r0
+   0563 F8                 2284 	mov	r0,a
+   0564 8A 82              2285 	mov	dpl,r2
+   0566 8B 83              2286 	mov	dph,r3
+   0568 8C F0              2287 	mov	b,r4
+   056A 12 08 B1           2288 	lcall	__gptrput
+                    04AD   2289 	C$CAN.C$717$2$4 ==.
+                           2290 ;	../CAN.C:717: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   056D 75 D8 08           2291 	mov	_CAN_ADCON,#0x08
+                    04B0   2292 	C$CAN.C$720$2$4 ==.
+                           2293 ;	../CAN.C:720: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   0570 75 D8 08           2294 	mov	_CAN_ADCON,#0x08
+                    04B3   2295 	C$CAN.C$723$2$4 ==.
+                           2296 ;	../CAN.C:723: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   0573 75 D8 08           2297 	mov	_CAN_ADCON,#0x08
+                    04B6   2298 	C$CAN.C$725$2$4 ==.
+                           2299 ;	../CAN.C:725: CAN_vReadEN();   // ReadMode is Enabled
+   0576 75 D8 00           2300 	mov	_CAN_ADCON,#0x00
+                    04B9   2301 	C$CAN.C$748$1$1 ==.
+                           2302 ;	../CAN.C:748: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+   0579 D0 04              2303 	pop	ar4
+   057B D0 02              2304 	pop	ar2
+                    04BD   2305 	C$CAN.C$725$2$4 ==.
+                           2306 ;	../CAN.C:725: CAN_vReadEN();   // ReadMode is Enabled
+   057D                    2307 00124$:
+   057D E5 D8              2308 	mov	a,_CAN_ADCON
+   057F 20 E1 FB           2309 	jb	acc.1,00124$
+                    04C2   2310 	C$CAN.C$729$1$1 ==.
+                           2311 ;	../CAN.C:729: pstObj->ulMask.ubDB[0] = (CAN_DATA2 & 0xFC) >> 2;   // MOARn[23-16]
+   0582 C0 02              2312 	push	ar2
+   0584 C0 04              2313 	push	ar4
+   0586 74 06              2314 	mov	a,#0x06
+   0588 2D                 2315 	add	a,r5
+   0589 FB                 2316 	mov	r3,a
+   058A E4                 2317 	clr	a
+   058B 3E                 2318 	addc	a,r6
+   058C F8                 2319 	mov	r0,a
+   058D 8F 01              2320 	mov	ar1,r7
+   058F 74 FC              2321 	mov	a,#0xFC
+   0591 55 DD              2322 	anl	a,_CAN_DATA2
+   0593 03                 2323 	rr	a
+   0594 03                 2324 	rr	a
+   0595 54 3F              2325 	anl	a,#0x3f
+   0597 8B 82              2326 	mov	dpl,r3
+   0599 88 83              2327 	mov	dph,r0
+   059B 89 F0              2328 	mov	b,r1
+   059D 12 08 B1           2329 	lcall	__gptrput
+                    04E0   2330 	C$CAN.C$730$2$4 ==.
+                           2331 ;	../CAN.C:730: pstObj->ulMask.ubDB[1] = (CAN_DATA3 & 0x1f);        // MOARn[31-24]
+   05A0 74 06              2332 	mov	a,#0x06
+   05A2 2D                 2333 	add	a,r5
+   05A3 F5 14              2334 	mov	_CAN_vGetMsgObj_sloc2_1_0,a
+   05A5 E4                 2335 	clr	a
+   05A6 3E                 2336 	addc	a,r6
+   05A7 F5 15              2337 	mov	(_CAN_vGetMsgObj_sloc2_1_0 + 1),a
+   05A9 8F 16              2338 	mov	(_CAN_vGetMsgObj_sloc2_1_0 + 2),r7
+   05AB 74 01              2339 	mov	a,#0x01
+   05AD 25 14              2340 	add	a,_CAN_vGetMsgObj_sloc2_1_0
+   05AF F5 10              2341 	mov	_CAN_vGetMsgObj_sloc0_1_0,a
+   05B1 E4                 2342 	clr	a
+   05B2 35 15              2343 	addc	a,(_CAN_vGetMsgObj_sloc2_1_0 + 1)
+   05B4 F5 11              2344 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 1),a
+   05B6 85 16 12           2345 	mov	(_CAN_vGetMsgObj_sloc0_1_0 + 2),(_CAN_vGetMsgObj_sloc2_1_0 + 2)
+   05B9 74 1F              2346 	mov	a,#0x1F
+   05BB 55 DE              2347 	anl	a,_CAN_DATA3
+   05BD 85 10 82           2348 	mov	dpl,_CAN_vGetMsgObj_sloc0_1_0
+   05C0 85 11 83           2349 	mov	dph,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   05C3 85 12 F0           2350 	mov	b,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   05C6 12 08 B1           2351 	lcall	__gptrput
+                    0509   2352 	C$CAN.C$731$2$4 ==.
+                           2353 ;	../CAN.C:731: pstObj->ulMask.ubDB[2] = 0x00;    // MOARn[15-8]
+   05C9 74 02              2354 	mov	a,#0x02
+   05CB 25 14              2355 	add	a,_CAN_vGetMsgObj_sloc2_1_0
+   05CD FB                 2356 	mov	r3,a
+   05CE E4                 2357 	clr	a
+   05CF 35 15              2358 	addc	a,(_CAN_vGetMsgObj_sloc2_1_0 + 1)
+   05D1 FC                 2359 	mov	r4,a
+   05D2 AA 16              2360 	mov	r2,(_CAN_vGetMsgObj_sloc2_1_0 + 2)
+   05D4 8B 82              2361 	mov	dpl,r3
+   05D6 8C 83              2362 	mov	dph,r4
+   05D8 8A F0              2363 	mov	b,r2
+   05DA E4                 2364 	clr	a
+   05DB 12 08 B1           2365 	lcall	__gptrput
+                    051E   2366 	C$CAN.C$732$2$4 ==.
+                           2367 ;	../CAN.C:732: pstObj->ulMask.ubDB[3] = 0x00;    // MOARn[15-8]
+   05DE 74 03              2368 	mov	a,#0x03
+   05E0 25 14              2369 	add	a,_CAN_vGetMsgObj_sloc2_1_0
+   05E2 FA                 2370 	mov	r2,a
+   05E3 E4                 2371 	clr	a
+   05E4 35 15              2372 	addc	a,(_CAN_vGetMsgObj_sloc2_1_0 + 1)
+   05E6 FB                 2373 	mov	r3,a
+   05E7 AC 16              2374 	mov	r4,(_CAN_vGetMsgObj_sloc2_1_0 + 2)
+   05E9 8A 82              2375 	mov	dpl,r2
+   05EB 8B 83              2376 	mov	dph,r3
+   05ED 8C F0              2377 	mov	b,r4
+   05EF E4                 2378 	clr	a
+   05F0 12 08 B1           2379 	lcall	__gptrput
+                    0533   2380 	C$CAN.C$735$2$4 ==.
+                           2381 ;	../CAN.C:735: ubTemp = ((pstObj->ulMask.ubDB[1]) & 0x03) << 6;
+   05F3 85 10 82           2382 	mov	dpl,_CAN_vGetMsgObj_sloc0_1_0
+   05F6 85 11 83           2383 	mov	dph,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   05F9 85 12 F0           2384 	mov	b,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   05FC 12 08 CA           2385 	lcall	__gptrget
+   05FF 54 03              2386 	anl	a,#0x03
+   0601 03                 2387 	rr	a
+   0602 03                 2388 	rr	a
+   0603 54 C0              2389 	anl	a,#0xc0
+   0605 F5 0F              2390 	mov	_CAN_vGetMsgObj_ubTemp_1_1,a
+                    0547   2391 	C$CAN.C$736$2$4 ==.
+                           2392 ;	../CAN.C:736: pstObj->ulMask.ubDB[1] = (pstObj->ulMask.ubDB[1] >> 2);
+   0607 85 10 82           2393 	mov	dpl,_CAN_vGetMsgObj_sloc0_1_0
+   060A 85 11 83           2394 	mov	dph,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   060D 85 12 F0           2395 	mov	b,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   0610 12 08 CA           2396 	lcall	__gptrget
+   0613 03                 2397 	rr	a
+   0614 03                 2398 	rr	a
+   0615 54 3F              2399 	anl	a,#0x3f
+   0617 85 10 82           2400 	mov	dpl,_CAN_vGetMsgObj_sloc0_1_0
+   061A 85 11 83           2401 	mov	dph,(_CAN_vGetMsgObj_sloc0_1_0 + 1)
+   061D 85 12 F0           2402 	mov	b,(_CAN_vGetMsgObj_sloc0_1_0 + 2)
+   0620 12 08 B1           2403 	lcall	__gptrput
+                    0563   2404 	C$CAN.C$737$2$4 ==.
+                           2405 ;	../CAN.C:737: pstObj->ulMask.ubDB[0] = (pstObj->ulMask.ubDB[0] + ubTemp);
+   0623 74 06              2406 	mov	a,#0x06
+   0625 2D                 2407 	add	a,r5
+   0626 FA                 2408 	mov	r2,a
+   0627 E4                 2409 	clr	a
+   0628 3E                 2410 	addc	a,r6
+   0629 FB                 2411 	mov	r3,a
+   062A 8F 04              2412 	mov	ar4,r7
+   062C 8A 82              2413 	mov	dpl,r2
+   062E 8B 83              2414 	mov	dph,r3
+   0630 8C F0              2415 	mov	b,r4
+   0632 12 08 CA           2416 	lcall	__gptrget
+   0635 F8                 2417 	mov	r0,a
+   0636 E5 0F              2418 	mov	a,_CAN_vGetMsgObj_ubTemp_1_1
+   0638 28                 2419 	add	a,r0
+   0639 F8                 2420 	mov	r0,a
+   063A 8A 82              2421 	mov	dpl,r2
+   063C 8B 83              2422 	mov	dph,r3
+   063E 8C F0              2423 	mov	b,r4
+   0640 12 08 B1           2424 	lcall	__gptrput
+                    0583   2425 	C$CAN.C$748$1$1 ==.
+                           2426 ;	../CAN.C:748: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+   0643 D0 04              2427 	pop	ar4
+   0645 D0 02              2428 	pop	ar2
+                    0587   2429 	C$CAN.C$737$1$1 ==.
+                           2430 ;	../CAN.C:737: pstObj->ulMask.ubDB[0] = (pstObj->ulMask.ubDB[0] + ubTemp);
+   0647                    2431 00129$:
+                    0587   2432 	C$CAN.C$742$1$1 ==.
+                           2433 ;	../CAN.C:742: CAN_vWriteCANAddress(CAN_MOIPR(ubObjNr));
+   0647 74 02              2434 	mov	a,#0x02
+   0649 25 13              2435 	add	a,_CAN_vGetMsgObj_sloc1_1_0
+   064B F5 D9              2436 	mov	_CAN_ADL,a
+   064D 74 02              2437 	mov	a,#0x02
+   064F 2A                 2438 	add	a,r2
+   0650 74 04              2439 	mov	a,#0x04
+   0652 3C                 2440 	addc	a,r4
+   0653 FC                 2441 	mov	r4,a
+   0654 7A 00              2442 	mov	r2,#0x00
+   0656 8C DA              2443 	mov	_CAN_ADH,r4
+                    0598   2444 	C$CAN.C$743$1$1 ==.
+                           2445 ;	../CAN.C:743: CAN_vReadEN();   // Readmode is Enabled
+   0658 75 D8 00           2446 	mov	_CAN_ADCON,#0x00
+   065B                    2447 00130$:
+   065B E5 D8              2448 	mov	a,_CAN_ADCON
+   065D 20 E1 FB           2449 	jb	acc.1,00130$
+                    05A0   2450 	C$CAN.C$745$1$1 ==.
+                           2451 ;	../CAN.C:745: pstObj->uwCounter.ubDB[0] = CAN_DATA2;  // MOIPRn[16-23]
+   0660 74 12              2452 	mov	a,#0x12
+   0662 2D                 2453 	add	a,r5
+   0663 FA                 2454 	mov	r2,a
+   0664 E4                 2455 	clr	a
+   0665 3E                 2456 	addc	a,r6
+   0666 FB                 2457 	mov	r3,a
+   0667 8F 04              2458 	mov	ar4,r7
+   0669 8A 82              2459 	mov	dpl,r2
+   066B 8B 83              2460 	mov	dph,r3
+   066D 8C F0              2461 	mov	b,r4
+   066F E5 DD              2462 	mov	a,_CAN_DATA2
+   0671 12 08 B1           2463 	lcall	__gptrput
+                    05B4   2464 	C$CAN.C$746$1$1 ==.
+                           2465 ;	../CAN.C:746: pstObj->uwCounter.ubDB[1] = CAN_DATA3;  // MOIPRn[31-24]
+   0674 74 12              2466 	mov	a,#0x12
+   0676 2D                 2467 	add	a,r5
+   0677 FD                 2468 	mov	r5,a
+   0678 E4                 2469 	clr	a
+   0679 3E                 2470 	addc	a,r6
+   067A FE                 2471 	mov	r6,a
+   067B 0D                 2472 	inc	r5
+   067C BD 00 01           2473 	cjne	r5,#0x00,00166$
+   067F 0E                 2474 	inc	r6
+   0680                    2475 00166$:
+   0680 8D 82              2476 	mov	dpl,r5
+   0682 8E 83              2477 	mov	dph,r6
+   0684 8F F0              2478 	mov	b,r7
+   0686 E5 DE              2479 	mov	a,_CAN_DATA3
+   0688 12 08 B1           2480 	lcall	__gptrput
+                    05CB   2481 	C$CAN.C$748$1$1 ==.
+                           2482 ;	../CAN.C:748: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+   068B D0 DE D0 DD D0 DC  2483 	 pop 0xDE pop 0xDD pop 0xDC pop 0xDB pop 0xDA pop 0xD9 
+        D0 DB D0 DA D0 D9
+                    05D7   2484 	C$CAN.C$749$1$1 ==.
+                    05D7   2485 	XG$CAN_vGetMsgObj$0$0 ==.
+   0697 22                 2486 	ret
+                           2487 ;------------------------------------------------------------
+                           2488 ;Allocation info for local variables in function 'CAN_vTransmit'
+                           2489 ;------------------------------------------------------------
+                           2490 ;ubObjNr                   Allocated to registers r2 
+                           2491 ;------------------------------------------------------------
+                    05D8   2492 	G$CAN_vTransmit$0$0 ==.
+                    05D8   2493 	C$CAN.C$778$1$1 ==.
+                           2494 ;	../CAN.C:778: void CAN_vTransmit(ubyte ubObjNr)
+                           2495 ;	-----------------------------------------
+                           2496 ;	 function CAN_vTransmit
+                           2497 ;	-----------------------------------------
+   0698                    2498 _CAN_vTransmit:
+   0698 AA 82              2499 	mov	r2,dpl
+                    05DA   2500 	C$CAN.C$780$1$1 ==.
+                           2501 ;	../CAN.C:780: CAN_pushAMRegs();    //   PUSH the CAN Access Mediator Register
+   069A                    2502 00101$:
+   069A E5 D8              2503 	mov	a,_CAN_ADCON
+   069C 20 E1 FB           2504 	jb	acc.1,00101$
+   069F C0 D9 C0 DA C0 DB  2505 	 push 0xD9 push 0xDA push 0xDB push 0xDC push 0xDD push 0xDE 
+        C0 DC C0 DD C0 DE
+                    05EB   2506 	C$CAN.C$782$1$1 ==.
+                           2507 ;	../CAN.C:782: CAN_vWriteCANAddress(CAN_MOCTR(ubObjNr));  //Addressing CAN_MOCTR register
+   06AB EA                 2508 	mov	a,r2
+   06AC C4                 2509 	swap	a
+   06AD 03                 2510 	rr	a
+   06AE 54 F8              2511 	anl	a,#0xf8
+   06B0 FB                 2512 	mov	r3,a
+   06B1 74 07              2513 	mov	a,#0x07
+   06B3 2B                 2514 	add	a,r3
+   06B4 F5 D9              2515 	mov	_CAN_ADL,a
+   06B6 EA                 2516 	mov	a,r2
+   06B7 75 F0 08           2517 	mov	b,#0x08
+   06BA A4                 2518 	mul	ab
+   06BB 24 07              2519 	add	a,#0x07
+   06BD 74 04              2520 	mov	a,#0x04
+   06BF 35 F0              2521 	addc	a,b
+   06C1 FB                 2522 	mov	r3,a
+   06C2 7A 00              2523 	mov	r2,#0x00
+   06C4 8B DA              2524 	mov	_CAN_ADH,r3
+                    0606   2525 	C$CAN.C$783$1$1 ==.
+                           2526 ;	../CAN.C:783: CAN_vWriteCANData(0x07200000);      // set TXRQ,TXEN0,TXEN1,MSGVAL
+   06C6 75 DB 00           2527 	mov	_CAN_DATA0,#0x00
+   06C9 75 DC 00           2528 	mov	_CAN_DATA1,#0x00
+   06CC 75 DD 20           2529 	mov	_CAN_DATA2,#0x20
+   06CF 75 DE 07           2530 	mov	_CAN_DATA3,#0x07
+   06D2 75 D8 F1           2531 	mov	_CAN_ADCON,#0xF1
+   06D5                    2532 00104$:
+   06D5 E5 D8              2533 	mov	a,_CAN_ADCON
+   06D7 20 E1 FB           2534 	jb	acc.1,00104$
+                    061A   2535 	C$CAN.C$785$1$1 ==.
+                           2536 ;	../CAN.C:785: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+   06DA D0 DE D0 DD D0 DC  2537 	 pop 0xDE pop 0xDD pop 0xDC pop 0xDB pop 0xDA pop 0xD9 
+        D0 DB D0 DA D0 D9
+                    0626   2538 	C$CAN.C$787$1$1 ==.
+                    0626   2539 	XG$CAN_vTransmit$0$0 ==.
+   06E6 22                 2540 	ret
+                           2541 ;------------------------------------------------------------
+                           2542 ;Allocation info for local variables in function 'CAN_vLoadData'
+                           2543 ;------------------------------------------------------------
+                           2544 ;ulpubData                 Allocated with name '_CAN_vLoadData_PARM_2'
+                           2545 ;ubObjNr                   Allocated to registers r2 
+                           2546 ;sloc0                     Allocated with name '_CAN_vLoadData_sloc0_1_0'
+                           2547 ;------------------------------------------------------------
+                    0627   2548 	G$CAN_vLoadData$0$0 ==.
+                    0627   2549 	C$CAN.C$818$1$1 ==.
+                           2550 ;	../CAN.C:818: void CAN_vLoadData(ubyte ubObjNr, ulong *ulpubData)
+                           2551 ;	-----------------------------------------
+                           2552 ;	 function CAN_vLoadData
+                           2553 ;	-----------------------------------------
+   06E7                    2554 _CAN_vLoadData:
+   06E7 AA 82              2555 	mov	r2,dpl
+                    0629   2556 	C$CAN.C$820$1$1 ==.
+                           2557 ;	../CAN.C:820: CAN_pushAMRegs();    //   PUSH the CAN Access Mediator Register
+   06E9                    2558 00101$:
+   06E9 E5 D8              2559 	mov	a,_CAN_ADCON
+   06EB 20 E1 FB           2560 	jb	acc.1,00101$
+   06EE C0 D9 C0 DA C0 DB  2561 	 push 0xD9 push 0xDA push 0xDB push 0xDC push 0xDD push 0xDE 
+        C0 DC C0 DD C0 DE
+                    063A   2562 	C$CAN.C$822$1$1 ==.
+                           2563 ;	../CAN.C:822: CAN_vWriteCANAddress(CAN_MOCTR(ubObjNr));  // Addressing CAN_MOCTRn register
+   06FA EA                 2564 	mov	a,r2
+   06FB C4                 2565 	swap	a
+   06FC 03                 2566 	rr	a
+   06FD 54 F8              2567 	anl	a,#0xf8
+   06FF FB                 2568 	mov	r3,a
+   0700 74 07              2569 	mov	a,#0x07
+   0702 2B                 2570 	add	a,r3
+   0703 F5 D9              2571 	mov	_CAN_ADL,a
+   0705 EA                 2572 	mov	a,r2
+   0706 75 F0 08           2573 	mov	b,#0x08
+   0709 A4                 2574 	mul	ab
+   070A 24 07              2575 	add	a,#0x07
+   070C 74 04              2576 	mov	a,#0x04
+   070E 35 F0              2577 	addc	a,b
+   0710 FB                 2578 	mov	r3,a
+   0711 7A 00              2579 	mov	r2,#0x00
+   0713 8B DA              2580 	mov	_CAN_ADH,r3
+                    0655   2581 	C$CAN.C$823$1$1 ==.
+                           2582 ;	../CAN.C:823: CAN_vWriteCANData(0x00080000);      // Set NEWDATA
+   0715 75 DB 00           2583 	mov	_CAN_DATA0,#0x00
+   0718 75 DC 00           2584 	mov	_CAN_DATA1,#0x00
+   071B 75 DD 08           2585 	mov	_CAN_DATA2,#0x08
+   071E 75 DE 00           2586 	mov	_CAN_DATA3,#0x00
+   0721 75 D8 F1           2587 	mov	_CAN_ADCON,#0xF1
+   0724                    2588 00104$:
+   0724 E5 D8              2589 	mov	a,_CAN_ADCON
+   0726 20 E1 FB           2590 	jb	acc.1,00104$
+                    0669   2591 	C$CAN.C$826$1$1 ==.
+                           2592 ;	../CAN.C:826: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   0729 75 D8 08           2593 	mov	_CAN_ADCON,#0x08
+                    066C   2594 	C$CAN.C$829$1$1 ==.
+                           2595 ;	../CAN.C:829: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   072C 75 D8 08           2596 	mov	_CAN_ADCON,#0x08
+                    066F   2597 	C$CAN.C$832$1$1 ==.
+                           2598 ;	../CAN.C:832: CAN_ADCON = ADR_DEC;   // Auto Decrement the current address(-1)
+   072F 75 D8 08           2599 	mov	_CAN_ADCON,#0x08
+                    0672   2600 	C$CAN.C$834$1$1 ==.
+                           2601 ;	../CAN.C:834: CAN_vWriteCANData(*ulpubData); // Loading CAN_MODATALn
+   0732 85 17 1A           2602 	mov	_CAN_vLoadData_sloc0_1_0,_CAN_vLoadData_PARM_2
+   0735 85 18 1B           2603 	mov	(_CAN_vLoadData_sloc0_1_0 + 1),(_CAN_vLoadData_PARM_2 + 1)
+   0738 85 19 1C           2604 	mov	(_CAN_vLoadData_sloc0_1_0 + 2),(_CAN_vLoadData_PARM_2 + 2)
+   073B 85 1A 82           2605 	mov	dpl,_CAN_vLoadData_sloc0_1_0
+   073E 85 1B 83           2606 	mov	dph,(_CAN_vLoadData_sloc0_1_0 + 1)
+   0741 85 1C F0           2607 	mov	b,(_CAN_vLoadData_sloc0_1_0 + 2)
+   0744 12 08 CA           2608 	lcall	__gptrget
+   0747 FD                 2609 	mov	r5,a
+   0748 A3                 2610 	inc	dptr
+   0749 12 08 CA           2611 	lcall	__gptrget
+   074C FE                 2612 	mov	r6,a
+   074D A3                 2613 	inc	dptr
+   074E 12 08 CA           2614 	lcall	__gptrget
+   0751 FF                 2615 	mov	r7,a
+   0752 A3                 2616 	inc	dptr
+   0753 12 08 CA           2617 	lcall	__gptrget
+   0756 F8                 2618 	mov	r0,a
+   0757 8D 01              2619 	mov	ar1,r5
+   0759 89 DB              2620 	mov	_CAN_DATA0,r1
+   075B 8E 03              2621 	mov	ar3,r6
+   075D 8B DC              2622 	mov	_CAN_DATA1,r3
+   075F 7A 00              2623 	mov	r2,#0x00
+   0761 7B 00              2624 	mov	r3,#0x00
+   0763 8F 04              2625 	mov	ar4,r7
+   0765 79 00              2626 	mov	r1,#0x00
+   0767 8C DD              2627 	mov	_CAN_DATA2,r4
+   0769 7D 00              2628 	mov	r5,#0x00
+   076B 7E 00              2629 	mov	r6,#0x00
+   076D 7F 00              2630 	mov	r7,#0x00
+   076F 88 DE              2631 	mov	_CAN_DATA3,r0
+   0771 75 D8 F1           2632 	mov	_CAN_ADCON,#0xF1
+   0774                    2633 00107$:
+   0774 E5 D8              2634 	mov	a,_CAN_ADCON
+   0776 20 E1 FB           2635 	jb	acc.1,00107$
+                    06B9   2636 	C$CAN.C$837$1$1 ==.
+                           2637 ;	../CAN.C:837: CAN_ADCON = ADR_INC;   // Auto Increment the current address(+1)
+                    06B9   2638 	C$CAN.C$839$1$1 ==.
+                           2639 ;	../CAN.C:839: ulpubData++;
+   0779 74 04              2640 	mov	a,#0x04
+   077B F5 D8              2641 	mov	_CAN_ADCON,a
+   077D 25 1A              2642 	add	a,_CAN_vLoadData_sloc0_1_0
+   077F F5 17              2643 	mov	_CAN_vLoadData_PARM_2,a
+   0781 E4                 2644 	clr	a
+   0782 35 1B              2645 	addc	a,(_CAN_vLoadData_sloc0_1_0 + 1)
+   0784 F5 18              2646 	mov	(_CAN_vLoadData_PARM_2 + 1),a
+   0786 85 1C 19           2647 	mov	(_CAN_vLoadData_PARM_2 + 2),(_CAN_vLoadData_sloc0_1_0 + 2)
+                    06C9   2648 	C$CAN.C$841$1$1 ==.
+                           2649 ;	../CAN.C:841: CAN_vWriteCANData(*ulpubData); // Loading CAN_MODATAHn
+   0789 AA 17              2650 	mov	r2,_CAN_vLoadData_PARM_2
+   078B AB 18              2651 	mov	r3,(_CAN_vLoadData_PARM_2 + 1)
+   078D AC 19              2652 	mov	r4,(_CAN_vLoadData_PARM_2 + 2)
+   078F 8A 82              2653 	mov	dpl,r2
+   0791 8B 83              2654 	mov	dph,r3
+   0793 8C F0              2655 	mov	b,r4
+   0795 12 08 CA           2656 	lcall	__gptrget
+   0798 FA                 2657 	mov	r2,a
+   0799 A3                 2658 	inc	dptr
+   079A 12 08 CA           2659 	lcall	__gptrget
+   079D FB                 2660 	mov	r3,a
+   079E A3                 2661 	inc	dptr
+   079F 12 08 CA           2662 	lcall	__gptrget
+   07A2 FC                 2663 	mov	r4,a
+   07A3 A3                 2664 	inc	dptr
+   07A4 12 08 CA           2665 	lcall	__gptrget
+   07A7 FD                 2666 	mov	r5,a
+   07A8 8A 06              2667 	mov	ar6,r2
+   07AA 8E DB              2668 	mov	_CAN_DATA0,r6
+   07AC 8B 07              2669 	mov	ar7,r3
+   07AE 8F DC              2670 	mov	_CAN_DATA1,r7
+   07B0 7E 00              2671 	mov	r6,#0x00
+   07B2 7F 00              2672 	mov	r7,#0x00
+   07B4 8C 00              2673 	mov	ar0,r4
+   07B6 79 00              2674 	mov	r1,#0x00
+   07B8 88 DD              2675 	mov	_CAN_DATA2,r0
+   07BA 7A 00              2676 	mov	r2,#0x00
+   07BC 7B 00              2677 	mov	r3,#0x00
+   07BE 7C 00              2678 	mov	r4,#0x00
+   07C0 8D DE              2679 	mov	_CAN_DATA3,r5
+   07C2 75 D8 F1           2680 	mov	_CAN_ADCON,#0xF1
+   07C5                    2681 00110$:
+   07C5 E5 D8              2682 	mov	a,_CAN_ADCON
+   07C7 20 E1 FB           2683 	jb	acc.1,00110$
+                    070A   2684 	C$CAN.C$844$1$1 ==.
+                           2685 ;	../CAN.C:844: CAN_ADCON = ADR_INC;   // Auto Increment the current address(+1)
+   07CA 75 D8 04           2686 	mov	_CAN_ADCON,#0x04
+                    070D   2687 	C$CAN.C$847$1$1 ==.
+                           2688 ;	../CAN.C:847: CAN_ADCON = ADR_INC;   // Auto Increment the current address(+1)
+   07CD 75 D8 04           2689 	mov	_CAN_ADCON,#0x04
+                    0710   2690 	C$CAN.C$849$1$1 ==.
+                           2691 ;	../CAN.C:849: CAN_vWriteCANData(0x00200040);  // reset RTSEL, set MSGVAL
+   07D0 75 DB 40           2692 	mov	_CAN_DATA0,#0x40
+   07D3 75 DC 00           2693 	mov	_CAN_DATA1,#0x00
+   07D6 75 DD 20           2694 	mov	_CAN_DATA2,#0x20
+   07D9 75 DE 00           2695 	mov	_CAN_DATA3,#0x00
+   07DC 75 D8 F1           2696 	mov	_CAN_ADCON,#0xF1
+   07DF                    2697 00113$:
+   07DF E5 D8              2698 	mov	a,_CAN_ADCON
+   07E1 20 E1 FB           2699 	jb	acc.1,00113$
+                    0724   2700 	C$CAN.C$851$1$1 ==.
+                           2701 ;	../CAN.C:851: CAN_popAMRegs();    //   POP the CAN Access Mediator Register
+   07E4 D0 DE D0 DD D0 DC  2702 	 pop 0xDE pop 0xDD pop 0xDC pop 0xDB pop 0xDA pop 0xD9 
+        D0 DB D0 DA D0 D9
+                    0730   2703 	C$CAN.C$853$1$1 ==.
+                    0730   2704 	XG$CAN_vLoadData$0$0 ==.
+   07F0 22                 2705 	ret
+                           2706 	.area CSEG    (CODE)
+                           2707 	.area CONST   (CODE)
+                           2708 	.area XINIT   (CODE)
+                           2709 	.area CABS    (ABS,CODE)

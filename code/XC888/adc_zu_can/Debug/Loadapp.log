@@ -1,0 +1,37 @@
+
+HiTOP5 symbol loader for SDCC 8051 Compiler (CDB format) 
+Copyright (c) 1997-2006          Hitex Development Tools GmbH
+
+
+Version: 5.40.832.0 (BE: Mar  3 2010, FE: Dec  9 2010)
+ 
+Include module "_SFRs" 
+Include module "MAIN" 
+Include module "ADC" 
+Include module "CAN" 
+Include module "IO" 
+Include module "SHARED_INT" 
+Include module "T2" 
+Include module "UART" 
+Include module "MemInitxc88x" 
+Include module "startupxc886" 
+
+Writing blocks 
+Writing symbols 
+
+
+Object file statistic
+---------------------
+Code Size:     0
+Publics:       421
+Types:         232
+Modules:       10
+Symbols:       806
+Source files:  9
+Source lines:  2823
+ 
+
+
+Object File "C:\SVN\buggy\code\adc_zu_can\Debug\adc_zu_can.cdb" successfully processed
+
+Used memory:    2454 kByte,    Used disk space:    0 kByte 
